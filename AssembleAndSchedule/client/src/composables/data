@@ -1,0 +1,303 @@
+[
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'Renewal Production                                                                                                 Company   :100'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': ' Proj |Customized Item |Upd Grp|Upd Seq|Plan FinDt| Sort 1    | Sort 2    | Sort 3    | Sort 4    | Sort 5    | Sort 6    | Feat 1 | Feat 2 | Feat 3 | Feat 4 | Feat 5 | Feat 6 |Feat 7  | Lino   |PRP Qty|'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': '------+----------------+-------|-------|----------|-----------|-----------| ----------|-----------|-----------|-----------|--------|--------|--------|--------|--------|--------|--------|--------|-------|'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'I92112|CS  WHWH13786837|    10 |     5 | 01-16-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       l   |        |       0|    full|      ff|      nf|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'P34473|CS  WHWH14183365|    10 |    10 | 01-18-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       l   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'P34473|CS  WHWH14183366|    10 |    15 | 01-18-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       l   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'S32273|CS  WHWH14183563|    10 |    20 | 01-16-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       l   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X06373|CS  WHWH14184831|    10 |    25 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       l   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X06373|CS  WHWH14184836|    10 |    30 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       l   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X06373|CS  WHWH14184840|    10 |    35 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       l   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X11114|CS  WHWH14406406|    10 |    40 | 01-16-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       l   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T38003|CS  WHWH14440910|    10 |    45 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       l   |        |       0|    full|      ff|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'L97708|CS  WHWH14144946|    10 |    50 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X06373|CS  WHWH14184838|    10 |    55 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X06373|CS  WHWH14184839|    10 |    60 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X06373|CS  WHWH14184841|    10 |    65 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X07063|CS  WHWH14214742|    10 |    70 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X07063|CS  WHWH14214743|    10 |    75 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'N49832|CS  WHWH14337076|    10 |    80 | 01-16-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |    101a|       1|    full|      ff|       n|   iegbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'N49832|CS  WHWH14337078|    10 |    85 | 01-16-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |    101b|       1|    full|      ff|       n|   iegbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'N49832|CS  WHWH14337079|    10 |    90 | 01-16-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |    101c|       1|    full|      ff|       n|   iegbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T38003|CS  WHWH14440909|    10 |    95 | 01-17-23 |       1   |      wh   |      wh   |      ff   |01-cs      |       r   |        |       0|    full|      ff|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'L97708|CT  WHWH14144936|    10 |   100 | 01-17-23 |       1   |      wh   |      wh   |      ff   |02-ct      |     lsr   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'L97708|CT  WHWH14144937|    10 |   105 | 01-17-23 |       1   |      wh   |      wh   |      ff   |02-ct      |     lsr   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X07063|CT  WHWH14214740|    10 |   110 | 01-17-23 |       1   |      wh   |      wh   |      ff   |02-ct      |     lsr   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X07063|CT  WHWH14214744|    10 |   115 | 01-17-23 |       1   |      wh   |      wh   |      ff   |02-ct      |     lsr   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X07063|CT  WHWH14214747|    10 |   120 | 01-17-23 |       1   |      wh   |      wh   |      ff   |02-ct      |     lsr   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T38003|CT  WHWH14440911|    10 |   125 | 01-17-23 |       1   |      wh   |      wh   |      ff   |02-ct      |     sss   |        |       0|    full|      ff|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'I92017|AN  WHWH13779756|    10 |   130 | 01-16-23 |       1   |      wh   |      wh   |      ff   |03-an      |           |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'S32998|AN  WHWH14222095|    10 |   135 | 01-16-23 |       1   |      wh   |      wh   |      ff   |03-an      |           |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'A98978|AN  WHWH14512261|    10 |   140 | 01-16-23 |       1   |      wh   |      wh   |      ff   |03-an      |           |        |       0|   sash1|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T38003|FW  WHWH14440908|    10 |   145 | 01-17-23 |       1   |      wh   |      wh   |      ff   |04-fw      |           |        |       0|    full|      ff|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X07063|CD  WHWH14214745|    10 |   150 | 01-17-23 |       1   |      wh   |      wh   |      ff   |05-cd      |      ls   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X07063|CD  WHWH14214741|    15 |     5 | 01-17-23 |       1   |      wh   |      wh   |      ff   |05-cd      |      sr   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X07063|CD  WHWH14214746|    15 |    10 | 01-17-23 |       1   |      wh   |      wh   |      ff   |05-cd      |      sr   |        |       0|    full|      ff|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'I92018|CS  WHWH13779759|    15 |    15 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'I92018|CS  WHWH13779760|    15 |    20 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'L90794|CS  WHWH13803109|    15 |    25 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'L90794|CS  WHWH13803113|    15 |    30 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'L97053|CS  WHWH14116410|    15 |    35 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'B95203|CS  WHWH14117650|    15 |    40 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'B95203|CS  WHWH14117656|    15 |    45 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'B95203|CS  WHWH14117658|    15 |    50 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'L97081|CS  WHWH14117742|    15 |    55 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'D96408|CS  WHWH14125067|    15 |    60 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'L97708|CS  WHWH14144939|    15 |    65 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'J95897|CS  WHWH14156663|    15 |    70 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'C95904|CS  WHWH14157315|    15 |    75 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'C95904|CS  WHWH14157332|    15 |    80 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'C95904|CS  WHWH14157336|    15 |    85 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'C96119|CS  WHWH14165033|    15 |    90 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'I98722|CS  WHWH14166586|    15 |    95 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'I98722|CS  WHWH14166590|    15 |   100 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'I98722|CS  WHWH14166591|    15 |   105 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'R37085|CS  WHWH14167815|    15 |   110 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X06053|CS  WHWH14170370|    15 |   115 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'N46733|CS  WHWH14172898|    15 |   120 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'M36265|CS  WHWH14174738|    15 |   125 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    2'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'Renewal Production                                                                                                 Company   :100'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': ' Proj |Customized Item |Upd Grp|Upd Seq|Plan FinDt| Sort 1    | Sort 2    | Sort 3    | Sort 4    | Sort 5    | Sort 6    | Feat 1 | Feat 2 | Feat 3 | Feat 4 | Feat 5 | Feat 6 |Feat 7  | Lino   |PRP Qty|'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': '------+----------------+-------|-------|----------|-----------|-----------| ----------|-----------|-----------|-----------|--------|--------|--------|--------|--------|--------|--------|--------|-------|'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'U25090|CS  WHWH14177539|    15 |   130 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'P34472|CS  WHWH14183339|    15 |   135 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'U25175|CS  WHWH14183442|    15 |   140 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T34326|CS  WHWH14184724|    15 |   145 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'R37324|CS  WHWH14186986|    15 |   150 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'R37324|CS  WHWH14186995|    20 |     5 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X06427|CS  WHWH14188036|    20 |    10 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X06427|CS  WHWH14188037|    20 |    15 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'N47096|CS  WHWH14194608|    20 |    20 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'U25331|CS  WHWH14195393|    20 |    25 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'N47125|CS  WHWH14196084|    20 |    30 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'N47125|CS  WHWH14196085|    20 |    35 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T34767|CS  WHWH14215512|    20 |    40 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     sdl|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T34767|CS  WHWH14215515|    20 |    45 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     sdl|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T34767|CS  WHWH14215516|    20 |    50 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     sdl|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T34767|CS  WHWH14215524|    20 |    55 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     sdl|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T34767|CS  WHWH14215527|    20 |    60 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     sdl|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'U25732|CS  WHWH14226283|    20 |    65 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'U25732|CS  WHWH14226284|    20 |    70 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'U25751|CS  WHWH14227257|    20 |    75 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'U26110|CS  WHWH14254956|    20 |    80 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'U26104|CS  WHWH14254964|    20 |    85 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     gbg|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'R38992|CS  WHWH14332561|    20 |    90 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'R38992|CS  WHWH14332564|    20 |    95 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'P35980|CS  WHWH14390953|    20 |   100 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'P35980|CS  WHWH14390954|    20 |   105 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'P35980|CS  WHWH14390955|    20 |   110 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'T37445|CS  WHWH14400565|    20 |   115 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'R39632|CS  WHWH14400798|    20 |   120 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X11065|CS  WHWH14403967|    20 |   125 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'F93473|CS  WHWH14418106|    20 |   130 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X11357|CS  WHWH14418392|    20 |   135 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'X11358|CS  WHWH14418395|    20 |   140 | 01-18-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'U28688|CS  WHWH14438004|    20 |   145 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'S38357|CS  WHWH14468844|    20 |   150 | 01-16-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|   frame|      if|       n|       n|        |        |   1   |'
+  },
+  {
+    'Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1': 'P36708|CS  WHWH14478216|    25 |     5 | 01-17-23 |       1   |      wh   |      wh   |      if   |01-cs      |       l   |        |       0|    full|      if|       n|     gbg|        |        |   1   |'
+  },
+  ... 833 more items
+]

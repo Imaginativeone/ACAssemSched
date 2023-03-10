@@ -1,0 +1,429 @@
+button {
+    margin: 18px;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    transition-duration: 0.4s;
+  }
+  
+  /* Start of PrimeVue DataTable Styling */
+  .p-datatable .p-datatable-thead tr th {
+    color: white;
+    background-color: #73777B;
+  }
+  .p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(odd) {
+    background: #DFDFDE;
+  }
+  .p-datatable .p-datatable-tbody > tr > td {
+    border-width: inherit;
+  
+    .p-column-title {
+      font-size: 16px;
+    }
+  }
+  /* End of PrimeVue DataTable Styling */
+  
+  /* Start of PrimeVue Button Styling */
+  .p-button {
+    margin: 14px;
+    padding: 8px 18px;
+    position: initial;
+  }
+  .p-button-label{
+    font-size: 18px;
+  }
+  .p-button.p-button-success {
+    background: rgb(34, 197, 94);
+  }
+  /* End of Primevue Button Styling */
+  
+  /* Start of PrimeVue Toast Styling */
+  .p-toast-summary{
+    font-size: 16px;
+  }
+  
+  /* Start of PrimeVue TabMenu Styling */
+  .p-menuitem-text {
+    font-size: 18px;
+  }
+  
+  button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .buttonSpinner {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 0px;
+  }
+  .buttonSpinner:after {
+    content: " ";
+    display: block;
+    width: 8px;
+    height: 8px;
+    //margin: 4px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: buttonSpinner 1.2s linear infinite;
+  }
+  @keyframes buttonSpinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .addRowImageButton {
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .deleteRowImageButton {
+    border: none;
+    width: 15px;
+    height: 15px;
+  }
+  
+  /* Start of LineDataGrid styles */
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  #nav {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    a {
+      font-weight: bold;
+      background-color: #dbe5e7;
+  
+      &.router-link-exact-active {
+        color: #42b983;
+      }
+    }
+  
+  }
+  .drop-zone {
+    background-color: #ecf0f1;
+    padding: 0px;
+    margin-top: 0px;
+    min-height: 10px;
+    list-style-type: none;
+  }
+  .inter-list-drag-el {
+    background-color: #b2daf5 !important;
+    border-style: solid;
+    border-color: white;
+    color: black !important;
+    padding: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    user-select: none;
+    text-align: left;
+    /* pointer-events: none; */
+  }
+  .intra-list-drag-el {
+    background-color: #b2daf5 !important;//#3498db
+    border-style: solid;
+    border-color: rgb(134, 88, 88);
+    color: black !important;
+    padding: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    user-select: none;
+    text-align: left;
+    /* pointer-events: none; */
+  }
+  .list-not-draggable-el {
+    background-color: #b2daf5 !important;
+    border-style: solid;
+    border-color: black;
+    color: black;
+    padding: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    user-select: none;
+    text-align: left;
+    /* pointer-events: none; */
+  }
+  .redbox {
+    background-color: crimson !important;
+    color: white !important;
+  }
+  .custombox{
+    background-color: #F66B0E !important;
+    color: white !important;
+  }
+  .itemList {
+    /* float: left; */
+    //width: 40%;
+    min-width: 40%;
+    max-width: 50%;
+    padding: 5px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .lineHeader {
+    color: white;  
+    background-color: #73777B;  
+    padding: 8px 18px 8px 18px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    
+    span{
+      flex-grow: 1;
+      text-align: left;
+      font-size: 18px;
+    }
+  }
+  .listsContainer {
+    text-align: center;
+    vertical-align: top;
+  }
+  button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+  }
+  .noPtrEvnts {
+    pointer-events: none; /* otherwise can drag into it, which causes issues */;
+    text-align: left;
+  }
+  .leftJustify {
+    align-content: left;
+  }
+  // .tableInDraggable {
+  //   pointer-events: none; /* otherwise can drag into it, which causes issues */
+  //   width: 100%; /* makes table width dynamic */
+  //   border-collapse: collapse;
+  // }
+  .fieldLabelInDraggable {
+    pointer-events: none; /* otherwise can drag into it, which causes issues */
+    color: #fff;
+    min-width: 5px;
+  }
+  .fieldDataInDraggable {
+    pointer-events: none; /* otherwise can drag into it, which causes issues */
+    color: yellow;
+    font-weight: bold;
+    min-width: 5px;
+  }
+  .tableHeader {
+    background: #73777B;        
+    color: white;
+    text-align: left;
+    padding: 5px;
+    
+    .tableCellData{
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  .tableCell {
+    pointer-events: none;
+    display: inline-block;
+    width: 11%;
+    text-align: left;
+    vertical-align: middle;
+    //width: 100px;
+    //height: 50px;
+    //border: 1px solid white;
+  }
+  .tableCellHdr {
+    //text-decoration: underline;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .tableCellData {
+    font-size: 15px;
+    padding: 0.4rem 1.3rem;
+  }
+  // .leftBorder {
+  //   // border-left: 1px solid;
+  //   // border-color: darkgrey;
+  // }
+  
+  /* Start of Add Custom Modal styles (minus modal-specific styling in its own section) */
+  .fieldContainer {
+    padding: 10px 20px;
+    text-align: right;
+    width: 400px;
+  }
+  .tableContainer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .verticalScroll300px {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-height: 300px;   
+    overflow-y : auto;
+  }
+  .buttonFooter {
+    padding: 30px;
+  }
+  .input-FXNO {
+    width: 90px;
+  }
+  .input-Qty {
+    width: 25px;
+  }
+  .input-HDNorMULL {
+    width: 100px;
+  }
+  .input-AframeType {
+    width: 60px;
+  }
+  .input-GlassType {
+    width: 50px;
+  }
+  .input-Week {
+    width: 165px;
+    font: Avenir, Helvetica, Arial, sans-serif;
+  }
+  .input-Dropdowns {
+    width: 170px;
+    height: 22px;
+  }
+  input[type="date"] {
+     display: -webkit-inline-flex;
+     font-family: Avenir, Helvetica, Arial, sans-serif;
+     overflow: hidden;
+     padding: 0;
+     -webkit-padding-start: 1px;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td, th {
+    //border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  /* End of Add Custom Modal styles (minus modal-specific styling in its own section) */
+  
+  .input-AframeNumber {
+    width: 140px;
+  }
+  
+  .input-SearchFXNO {
+    width: 140px;
+  }
+  
+  /* Start of modal-specific styling */
+  .modal-animation-enter-active,
+  .modal-animation-leave-active {
+    transition: opacity 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02);
+  }
+  .modal-animation-enter-from,
+  .modal-animation-leave-to {
+    opacity: 0;
+  }
+  .modal-animation-inner-enter-active {
+    transition: all 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02) 0.15s;
+  }
+  .modal-animation-inner-leave-active {
+    transition: all 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02);
+  }
+  .modal-animation-inner-enter-from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  .modal-animation-inner-leave-to {
+    transform: scale(0.8);
+  }
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    .modal-inner {
+      position: relative;
+      max-width: 640px;
+      width: 80%;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      background-color: #fff;
+      padding: 10px 16px;
+      i {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+          color: #3498db;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        font-size: 16px;
+        background-color: #3498db;
+        color: #fff;
+        cursor: pointer;
+      }
+      .smallButton {
+        padding: 5px 10px;
+        font-size: smaller;
+      }
+    }
+  }
+  /* End of modal-specific styling */
+  
+  /* Start of Packet Report styling */
+  .packetButtonGroup {
+    padding-right: 28px;
+  }
+  .packetButton {
+    margin: 0px 1px;
+  }
+  .packetReportContainer {
+    font-size: 24px;
+  }
+  .packetReportContainer td, th {
+    padding: 2px;
+  }
+  .packetReportContainer tr {
+    page-break-inside: avoid;
+  }
+  .barcode {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    }
+  .darkReportRow {
+    background-color: rgb(221, 221, 221);
+    -webkit-print-color-adjust:exact;
+  }
+  /* End of Packet Report styling */
