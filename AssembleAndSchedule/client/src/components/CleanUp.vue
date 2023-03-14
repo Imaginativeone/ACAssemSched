@@ -1,8 +1,9 @@
 <template>
-    <H1 class="btn"> The Clean-UP Component HAS loaded! Where's the Data?!</H1>
-    
+    <div>
+       <button v-bind:disabled="isDisabled" > The Clean-UP Component HAS loaded! Where's the Data?!</button>
+    </div>
     <!-- Data Grid Header -->
-    <div class="tableHeader">
+    <div v-bind:disabled="isDisabled" class="tableHeader" >
           <div class="noPtrEvnts">
             <div class="noPtrEvnts">
               <div class="tableCell">
@@ -95,9 +96,8 @@
   </vue-excel-editor> -->
 
         <!-- <vue-excel-column field="updGrp" label="Update Group"   type="string" width="50px" :options="['F','M','U']" /> -->
-        <div>
-        <button @click="convert2Json()"></button>
-    </div>
+
+
 </template>
 
 <script>
@@ -112,13 +112,17 @@ export default {
     data(){
         return{
             file: 'file',
-            text: ""
+            text: "",
+            isDisabled: false
         }
     },
     components: {
         
     },
     methods: {
+        getFile(){
+          fetch("/uploadedFile/${{this.file}}").then(response => {return response.json(); })
+        },
         convert2Json(){
             // Require library
             

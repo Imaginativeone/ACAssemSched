@@ -61,6 +61,7 @@ import ButtonComponent from '../components/ButtonComponent'
 import SimpleUpload from '../components/SimpleUpload.vue'
 import CleanUp from '../components/CleanUp.vue'
 // import Dropzone from '../components/DropZone.vue'
+import 'convert-csv-to-json'
 
 // import FileReader from '@/components/FileReader.vue'
 // import CleanUp from '@/components/CleanUp.vue'
@@ -109,9 +110,21 @@ import CleanUp from '../components/CleanUp.vue'
         getData(){
           const schData = this.$refs.file
           console.log('Did we read the file success?', schData);
-        }
+        },
 
-      
+        convertCSV(){
+            const csvToJson = require('convert-csv-to-json');
+
+            const fileInputName = '{{file}}.csv'; 
+            const fileOutputName = 'assemData.json';
+
+            const json = csvToJson.getJsonFromCsv("myInputFile.csv");
+
+            for(let i=0; i<json.length;i++){
+                console.log(json[i]);
+            }
+            return csvToJson.generateJsonFileFromCsv(fileInputName,fileOutputName);
+        }     
     }
   }
     
