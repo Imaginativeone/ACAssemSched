@@ -34,12 +34,14 @@
       />
 
  </div>
+ <input type="file"> {{ this.file }}
 
   <!-- Upload file -->
   <div class="section">
   <div> 
 
-   <CleanUp />
+   <!-- <CleanUp /> -->
+   <!-- <input type="file" id="dealCsv" /> -->
   
   </div>
     <div class="container">
@@ -59,9 +61,10 @@ import axios from 'axios'
 
 import ButtonComponent from '../components/ButtonComponent'
 import SimpleUpload from '../components/SimpleUpload.vue'
-import CleanUp from '../components/CleanUp.vue'
+// import CleanUp from '../components/CleanUp.vue'
+import '../composables/convert'
+
 // import Dropzone from '../components/DropZone.vue'
-import 'convert-csv-to-json'
 
 // import FileReader from '@/components/FileReader.vue'
 // import CleanUp from '@/components/CleanUp.vue'
@@ -71,7 +74,7 @@ import 'convert-csv-to-json'
 // import reader from 'readline'
 
   export default {
-    components: { ButtonComponent, SimpleUpload, CleanUp /* Dropzone */ },
+    components: { ButtonComponent, SimpleUpload, /* CleanUp */ /* Dropzone */ },
     name: 'CasementView',
     props: {
       file: String
@@ -94,7 +97,7 @@ import 'convert-csv-to-json'
           console.log('Reset the page')
         },
         cleanUp(){
-          console.log('This should display an excel file of sorted data');
+          //To show the cleaned-sorted table
         },
         batchBin(){
           console.log('rules for batching');
@@ -112,21 +115,77 @@ import 'convert-csv-to-json'
           console.log('Did we read the file success?', schData);
         },
 
-        convertCSV(){
-            const csvToJson = require('convert-csv-to-json');
+        // convertCSV(){
+        //     const csvToJson = require('convert-csv-to-json');
 
-            const fileInputName = '{{file}}.csv'; 
-            const fileOutputName = 'assemData.json';
+        //     const fileInputName = '{{this.file}}.csv'; 
+        //     const fileOutputName = 'assemData.json';
 
-            const json = csvToJson.getJsonFromCsv("myInputFile.csv");
+        //     const json = csvToJson.getJsonFromCsv("this.file");
 
-            for(let i=0; i<json.length;i++){
-                console.log(json[i]);
+        //     for(let i=0; i<json.length;i++){
+        //         console.log(json[i]);
+        //     }
+        //     return csvToJson.generateJsonFileFromCsv(fileInputName,fileOutputName);
+        // },
+        csvJSON(csv) {
+            console.log(csv)
+            var lines = csv.split('\n')
+
+            var result = []
+
+            var headers = lines[0].split('|')
+
+            for (var i = 1; i < lines.length; i++) {
+                var obj = {}
+                var currentline = lines[i].split('|')
+
+                for (var j = 0; j < headers.length; j++) {
+                    obj[headers[j]] = currentline[j]
+                }
+
+                result.push(obj)
             }
-            return csvToJson.generateJsonFileFromCsv(fileInputName,fileOutputName);
-        }     
-    }
-  }
+            console.log('data', result)
+        },
+
+  // /*------ Method for read uploded csv file ------*/
+  //       uploadDealcsv.prototype.getCsv = function(e) {
+            
+  //           let input = document.getElementById('dealCsv');
+  //           input.addEventListener('change', function() {
+
+  //             if (this.files && this.files[0]) {
+
+  //                 var myFile = this.files[0];
+  //                 var reader = new FileReader();
+                  
+  //                 reader.addEventListener('load', function (e) {
+                      
+  //                     let csvdata = e.target.result; 
+  //                     parseCsv.getParsecsvdata(csvdata); // calling function for parse csv data 
+  //                 });
+                  
+  //                 reader.readAsBinaryString(myFile);
+  //             }
+  //     });
+  //   }
+
+  //   /*------- Method for parse csv data and display --------------*/
+  //   uploadDealcsv.prototype.getParsecsvdata = function(data) {
+
+  //       let parsedata = [];
+
+  //       let newLinebrk = data.split("\n");
+  //       for(let i = 0; i < newLinebrk.length; i++) {
+
+  //           parsedata.push(newLinebrk[i].split(","))
+  //       }
+
+  //       console.table(parsedata);
+  //   });    
+   }
+}
     
 </script>
 

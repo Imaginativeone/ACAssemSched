@@ -7,6 +7,11 @@ dotenv.config();
 const app = express();
 
 
+/* Middleware  */
+app.use(bodyParser.json())
+
+
+
 app.use(function(err, req, res, next){
     if(err.code === "LIMIT_FILE_TYPES"){
         res.status(422).json({ error: "Only CVS or Excel files allowed"});
@@ -21,9 +26,6 @@ app.use(function(err, req, res, next){
     }
 });
 
-/* Middleware  */
-
-app.use(bodyParser.json())
 
 /* API Routes */
 

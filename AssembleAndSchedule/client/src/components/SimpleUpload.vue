@@ -26,7 +26,8 @@
                   Choose a file ...
                 </span>
               </span> 
-              <span v-if="file" class="file-name">{{ file.name }} </span>
+              <span v-if="file" class="file-name">{{ csvJSON(file.name) }} </span>
+              <p>{{ this.file }}</p>
           </label>
 
         </div>
@@ -97,15 +98,16 @@ export default {
       const formData = new FormData();
       formData.append('file', this.file);
       try {
-        await axios.post('/uploadedFiles', formData);
+        let result = await axios.post('/uploadedFiles', formData);
         this.message = "File has been uploaded";
         this.file = "";
         this.error = false;
+        console.log(result);
       } catch (err) {
         this.message = err.respsonse.data.error;
         this.error = true;
       }
-
+      
     },
     async saveFile(){
         if(this.file){
@@ -120,6 +122,26 @@ export default {
           }
         } 
     },
+    async csvJSON(csv) {
+            console.log(csv)
+            var lines = csv.split('\n')
+
+            var result = []
+
+            var headers = lines[0].split('|')
+
+            for (var i = 1; i < lines.length; i++) {
+                var obj = {}
+                var currentline = lines[i].split('|')
+
+                for (var j = 0; j < headers.length; j++) {
+                    obj[headers[j]] = currentline[j]
+                }
+
+                result.push(obj)
+            }
+            console.log('data', result)
+        },
   }
 }
 </script>

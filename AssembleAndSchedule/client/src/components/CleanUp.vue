@@ -53,16 +53,6 @@
               </div>
               <div class="tableCell">
                 <div class="tableCellData">
-                  Grille Type
-                </div>
-              </div>
-              <div class="tableCell">
-                <div class="tableCellData">
-                  Grille Type
-                </div>
-              </div>
-              <div class="tableCell">
-                <div class="tableCellData">
                   Plan Fin Date
                 </div>
               </div>
@@ -106,7 +96,6 @@
 // import excelFile from '../composables/data.xlsx'
 // import FileReader from "./FileReader.vue"
 
-
 export default {
     name: 'CleanUp',
     data(){
@@ -121,7 +110,9 @@ export default {
     },
     methods: {
         getFile(){
+          const dataFile = this.file
           fetch("/uploadedFile/${{this.file}}").then(response => {return response.json(); })
+          console.log(dataFile);
         },
         convert2Json(){
             // Require library
