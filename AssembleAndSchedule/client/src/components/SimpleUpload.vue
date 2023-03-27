@@ -26,8 +26,7 @@
                   Choose a file ...
                 </span>
               </span> 
-              <span v-if="file" class="file-name">{{ csvJSON(file.name) }} </span>
-              <p>{{ this.file }}</p>
+              <span v-if="file" class="file-name">{{file.name }} </span>
           </label>
 
         </div>
@@ -56,7 +55,7 @@ export default {
     }
   },
   methods: {
-    selectFile(){
+    async selectFile(){
       const file = this.$refs.file.files[0];
       const allowedTypes = ["text/csv", "text/xls", "text/xlsm", "text/xlsx", "text/plain", "image/gif", "image/png", "image/jpeg"];
       const MAX_SIZE = 20000000;
@@ -70,21 +69,33 @@ export default {
         this.error = true;
         this.message =  tooLarge ? `Too large. Max size is ${MAX_SIZE/1000}kb`: " Only CVS or Excel files allowed";
       }
-      // parsedFile = this.file.convertToJson()
+
+      console.log('We are here in SelectFile Line 72')
+
+      const formData = new FormData();
+      formData.append('file', this.file);
+      JSON.stringify(this.file);
+
+      // Read file contents  ---> this DOES NOT WORK
+      const fileContents = new FileReader();
+      let fileContent = fileContents.readAsText(this.file);
+      console.log('This time? ---> line 82', fileContent, this.file)
 
     },
+
     async sendFile(){
       const formData = new FormData();
       formData.append('file', this.file);
       JSON.stringify(formData);
       // const file = ' ';
+      let uploadedFiles = []
 
       try {
         // await axios.post({file:file}, formData)
 
-        await axios.post('/uploadedFiles', formData);
+        // await axios.post('/uploadedFiles', formData);
+        await axios.post(uploadedFiles, formData)
         // console.log(JSON.stringify(formData));
-        console.log('FormData Contents----->',formData);
         this.message = "File has been uploaded";
         this.file = "";
         this.error = false;
@@ -92,6 +103,7 @@ export default {
         this.message = err.respsonse.data.error;
         this.error = true;
       }
+      console.log('The data', uploadedFiles);
     
     },
     async uploadFile(){
@@ -122,26 +134,52 @@ export default {
           }
         } 
     },
-    async csvJSON(csv) {
-            console.log(csv)
-            var lines = csv.split('\n')
+    showFileContents(){
+          let input = document.querySelector('input');
+          let textArea = document.querySelector('textarea');
+          
+          input.addEventListener('input', () => {
+            let files = input.files;
 
-            var result = []
+            if(files.length == 0) return;
 
-            var headers = lines[0].split('|')
+            const file = this.file[0];
 
-            for (var i = 1; i < lines.length; i++) {
-                var obj = {}
-                var currentline = lines[i].split('|')
+            let reader = new FileReader();
 
-                for (var j = 0; j < headers.length; j++) {
-                    obj[headers[j]] = currentline[j]
-                }
+            reader.onload = (e) => {
+              const file = e.target.result;
+              const lines = file.split(/\r\n|\n/);
+              textArea.value = lines.join('\n')
+            };
 
-                result.push(obj)
-            }
-            console.log('data', result)
+            reader.onerror = (e) => alert(e.target.name);
+
+            reader.readAsText(file);
+          })
         },
+
+    async txt2JSON(){
+        const file = this.file;
+        console.log(file)
+        var lines = file.split('\n')
+
+        var result = []
+
+        var headers = lines[0].split('|')
+
+        for (var i = 1; i < lines.length; i++) {
+            var obj = {}
+            var currentline = lines[i].split('|')
+
+            for (var j = 0; j < headers.length; j++) {
+                obj[headers[j]] = currentline[j]
+            }
+
+            result.push(obj)
+        }
+        console.log('data', result)
+    },
   }
 }
 </script>
