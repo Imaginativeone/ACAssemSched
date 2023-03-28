@@ -1,5 +1,5 @@
-import assemdb from "../database";
-import '../models/assemFile'
+import assemdb from "../database.js";
+import '../models/assemFileData.js'
 import {Model, DataTypes} from 'sequelize'
 
 class AssemFileData extends Model {};
@@ -8,7 +8,7 @@ AssemFileData.init({
     primaryKey: true
     },
     file_id: {type: DataTypes.STRING, references:{
-        model:AssemFile,
+        model:'AssemFile',
         key: 'id'
     }},
     proj_no: DataTypes.STRING,

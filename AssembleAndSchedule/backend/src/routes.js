@@ -70,8 +70,8 @@ router.get("/assemFileData/:id", async (req, res) => {
   // TODO: Parse data from file
   const assemfileData = sequelize.models.assemfileData;
   return sequelize.models.assemfileData
-    .findAll({where: {assemFileId}})
-    .then((id) => res.send(assemfileData))
+    .findAll({where: {assemFileId:req.params.id}})
+    .then((data) => res.send(data))
     .catch((err) => {
       console.log("There was an error querying file data", JSON.stringify(err));
       return res.send(err);
@@ -81,17 +81,17 @@ router.get("/assemFileData/:id", async (req, res) => {
 router.get("/assemFileData/:assemFileDataId", async (req, res) => {
   // return data per id containing to project number
   await assemFileData.findAll(req.params.assemFileDataId)
-    .then((assemFileData) => {
-      res.send(assemFileData);
+    .then((data) => {
+      res.send(data);
     })
     .catch(console.log);
 });
 
 router.get("/assemFileData/:assemFileDataId", async (req, res) => {
-  const assemFileDataId = await sequelize.models.assemFileDataId;
+  const assemFileDataId = req.params.id;
   return sequelize.models.assemFileDataId
     .findByPk(assemFileDataId)
-    .then((assemFileDataId) => res.send(assemFileDataId))
+    .then((data) => res.send(data))
     .catch((err) => {
       console.log("There was an error querying file data", JSON.stringify(err));
       return res.send(err);
@@ -102,7 +102,7 @@ router.post("/assemFileData/assemfileDataId", (req, res) => {
   const { id, owner, createdAt, proj_no, customized_item, upd_grp, upd_seq, int_ext, grille_type, 
           plan_fin_dt, grille, sort1, sort2, sort3, sort4, sort5, sort6, 
           feat1, feat2, feat3, feat4, feat5, feat6, feat7, lino, prp_qty } = req.body;
-  return sequelize.models.picture
+  return sequelize.models.assemFileData
     .create({ id, owner, createdAt, proj_no, customized_item, upd_grp, upd_seq, int_ext, grille_type, 
         plan_fin_dt, grille, sort1, sort2, sort3, sort4, sort5, sort6, 
         feat1, feat2, feat3, feat4, feat5, feat6, feat7, lino, prp_qty })
