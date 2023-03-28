@@ -1,16 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const sequelize = require('sequelize')
+
 const dotenv = require("dotenv");
 
 dotenv.config();
 const app = express();
 
+sequelize.AsyncQueueError({force: false}).then(()=> {
+    app.listen(process.env.DB_PORT, () => console.log('now listening'))
+})
 
 /* Middleware  */
 app.use(bodyParser.json())
-
-
 
 app.use(function(err, req, res, next){
     if(err.code === "LIMIT_FILE_TYPES"){
