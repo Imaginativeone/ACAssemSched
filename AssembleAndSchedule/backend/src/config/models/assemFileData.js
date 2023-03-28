@@ -14,6 +14,7 @@ class AssemFileData extends Model {
     ];
   }
 }
+
 AssemFileData.init(
   {
     id: { type: DataTypes.STRING, primaryKey: true },
@@ -52,6 +53,9 @@ AssemFileData.init(
   { sequelize: assemdb, modelName: "assemFileData" }
 );
 
+AssemFile.hasMany(AssemFileData, {foreignKey: 'file_id'})
+
+// AssemFileData.belongsTo(AssemFile, {onDelete: "CASCADE"})
 AssemFileData.belongsTo(AssemFile, { onDelete: "CASCADE" })(async () => {
   await assemdb.sync();
 })();

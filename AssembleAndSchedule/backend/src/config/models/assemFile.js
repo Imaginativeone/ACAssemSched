@@ -18,8 +18,7 @@ AssemFile.init(
   { sequelize: assemdb, modelName: "AssemFile" }
 );
 
-(async () => {
-  await assemdb.sync();
+(async () => {await assemdb.sync();
 })();
 
 export default AssemFile;
