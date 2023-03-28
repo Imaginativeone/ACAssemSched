@@ -1,8 +1,12 @@
 import assemdb from "../database.js";
-import '../models/assemFileData.js'
+import './assemFile.js'
 import {Model, DataTypes} from 'sequelize'
 
-class AssemFileData extends Model {};
+class AssemFileData extends Model {
+    getProject(){
+        return [this.proj_no, this.customized_item, this.upd_grp, this.upd_seq, this.grille, this.plan_fin_dt];
+    }
+};
 AssemFileData.init({
     id:{ type: DataTypes.STRING,
     primaryKey: true
@@ -13,8 +17,8 @@ AssemFileData.init({
     }},
     proj_no: DataTypes.STRING,
     customized_item: DataTypes.STRING,
-    Upd_Grp: DataTypes.STRING,
-    Upd_seq: DataTypes.STRING,
+    upd_grp: DataTypes.STRING,
+    upd_seq: DataTypes.STRING,
     int_ext: DataTypes.STRING,
     grille_type: DataTypes.STRING,
     plan_fin_dt: DataTypes.STRING,
@@ -33,7 +37,8 @@ AssemFileData.init({
     feat6: DataTypes.STRING,
     feat7: DataTypes.STRING,
     lino: DataTypes.STRING,
-    prp_qty: DataTypes.STRING
+    prp_qty: DataTypes.STRING,
+    color_type: DataTypes.STRING
 
 }, {assemdb, modelName: 'assemFileData'});
 

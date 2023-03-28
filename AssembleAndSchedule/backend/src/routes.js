@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-import { sequelize } from "./database";
+import { Sequelize } from "sequelize";
+import { sequelize } from "./database.js";
+const sequelize = new Sequelize('postgres::memory')
 
 /* --------- CRUD files ------- */
 router.get("/assemFiles", (req, res) => {
@@ -14,10 +16,10 @@ router.get("/assemFiles", (req, res) => {
     });
 });
 
-router.get("/assemFilesId", (req, res) => {
+router.get("/assemFiles:Id", (req, res) => {
     return sequelize.models.assemFile
-      .findAll()
-      .then((assemFileId) => res.send(assemFileId))
+      .findAll(req.params.Id)
+      .then((data) => res.send(data))
       .catch((err) => {
         console.log("There was an error querying files", JSON.stringify(err));
         return res.send(err);
@@ -28,7 +30,7 @@ router.post("/assemFiles", (req, res) => {
   const { fileName, id, owner, processed, createdAt } = req.body;
   return sequelize.models.assemFile
     .create({ fileName, owner, processed, id, createdAt })
-    .then((assemFile) => res.send(assemFile))
+    .then((data) => res.send(data))
     .catch((err) => {
       console.log(
         "***There was an error creating a the file in the database",
@@ -42,7 +44,7 @@ router.delete("/assemFile/:id", (req, res) => {
   const id = req.params.id;
   return sequelize.models.assemFile
     .findById(id)
-    .then((assemFileId) => assemFile.destroy({ force: true }))
+    .then((data) => assemFile.destroy({ force: true }))
     .then(() => res.send({ id }))
     .catch((err) => {
       console.log("***Error deleting file", JSON.stringify(err));
@@ -106,8 +108,8 @@ router.post("/assemFileData/assemfileDataId", (req, res) => {
     .create({ id, owner, createdAt, proj_no, customized_item, upd_grp, upd_seq, int_ext, grille_type, 
         plan_fin_dt, grille, sort1, sort2, sort3, sort4, sort5, sort6, 
         feat1, feat2, feat3, feat4, feat5, feat6, feat7, lino, prp_qty })
-    .then((assemFileData) => {
-        return res.send(assemFileData);
+    .then((data) => {
+        return res.send(data);
     })
     .catch((err) => {
       console.log(
