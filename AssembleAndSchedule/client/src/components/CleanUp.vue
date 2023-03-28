@@ -1,12 +1,17 @@
 <template>
-    <H1 class="btn"> The Clean-UP Component HAS loaded! Where's the Data?!</H1>
+    <div>
+       <button class="div" @click="showFileContents"> The Clean-UP Component HAS loaded! Where's the Data?!</button>
+       <input type="file">
+       <textarea cols="30" rows="20"></textarea>
+    </div>
+    
     
     <!-- Data Grid Header -->
-    <div class="tableHeader">
+    <div v-bind:disabled="isDisabled" class="tableHeader" >
           <div class="noPtrEvnts">
             <div class="noPtrEvnts">
               <div class="tableCell">
-                <div class="tableCellData">
+                <div class="tableCellData" v-bind="showFileContents">
                   Proj
                 </div>
               </div>
@@ -52,16 +57,6 @@
               </div>
               <div class="tableCell">
                 <div class="tableCellData">
-                  Grille Type
-                </div>
-              </div>
-              <div class="tableCell">
-                <div class="tableCellData">
-                  Grille Type
-                </div>
-              </div>
-              <div class="tableCell">
-                <div class="tableCellData">
                   Plan Fin Date
                 </div>
               </div>
@@ -95,9 +90,15 @@
   </vue-excel-editor> -->
 
         <!-- <vue-excel-column field="updGrp" label="Update Group"   type="string" width="50px" :options="['F','M','U']" /> -->
-        <div>
-        <button @click="convert2Json()"></button>
-    </div>
+<div>
+  <form id="'form"> 
+    <input type="file" id="docpicker" accept=".txt" required multiple />
+    
+  </form> 
+</div>
+
+<div id="output"></div>
+
 </template>
 
 <script>
@@ -106,40 +107,106 @@
 // import excelFile from '../composables/data.xlsx'
 // import FileReader from "./FileReader.vue"
 
-
 export default {
     name: 'CleanUp',
     data(){
         return{
             file: 'file',
-            text: ""
+            text: "",
+            isDisabled: false
         }
     },
     components: {
         
     },
     methods: {
-        convert2Json(){
-            // Require library
-            
-            const reader = require('xlsx')
+        getFile(){
+          // const dataFile = this.file
+          const file = fetch("https://localhost:3305/uploadedFiles/").then(response => {return response.json(); })
+          console.log(file);
+        },
+        textToJSON() {
+            console.log(this.file)
+            var lines = this.file.split('\n')
 
-            // read file
-            const file = reader.readFile(this.file)
-            console.log(JSON.stringify(file))
+            var result = []
 
-            let data = []
+            var headers = lines[0].split('|')
 
-            const sheets = file.SheetNames
+            for (var i = 1; i < lines.length; i++) {
+                var obj = {}
+                var currentline = lines[i].split('|')
 
-            for(let i=0; i < sheets.length; i++){
-                const temp = reader.utils.sheet_to_json(
-                    file.Sheets[file.SheetNames[i]])
-                    temp.forEach((res) => {
-                    data.push(res)
-                })
+                for (var j = 0; j < headers.length; j++) {
+                    obj[headers[j]] = currentline[j]
+                }
+
+                result.push(obj)
             }
+            console.log('data', result)
+        }, 
+        showFileContents(){
+          // For testing, Try this function on the Casement Vue to see the file
+          let input = document.querySelector('input');
+          let textArea = document.querySelector('textarea');
+          
+          document.getElementById('docpicker').addEventListener('change', function(event){
+            event.preventDefault();
+
+            var fr = new FileReader();
+            fr.onload = function(){
+              document.getElementById("output").textContent = fr.result;
+            }
+
+            fr.readAsText(this.file[0])
+          });
+
+          input.addEventListener('change', () => {
+            let files = input.files;
+
+            if(files.length == 0) return;
+
+            const file = this.file[0];
+
+            let reader = new FileReader();
+
+            reader.onload = (e) => {
+              const file = e.target.result;
+              const lines = file.split(/\r\n|\n/);
+              textArea.value = lines.join('\n')
+            };
+
+            reader.onerror = (e) => alert(e.target.name);
+
+            reader.readAsText(file);
+          })
+
+        //   document.getElementById('inputfile')
+        //     .addEventListener('change', function() {
+              
+        //     var fr=new FileReader();
+        //     fr.onload=function(){
+        //         document.getElementById('outputFile')
+        //                 .textContent=fr.result;
+        //     }
+              
+        //     fr.readAsText(this.files[0]);
+        // })
         }
     }
 }
 </script>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  textarea{
+    margin-top: 15px;
+    width: 50%;
+  }
+
+</style>

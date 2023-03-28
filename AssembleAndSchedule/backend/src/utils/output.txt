@@ -1,0 +1,1025 @@
+0 ﻿Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    1 undefined undefined
+1 Renewal Production                                                                                                 Company   :100 undefined undefined
+2  undefined undefined
+3 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+4  Proj  Customized Item   Sort 1    
+5 ------+----------------+------- -------  ----------
+6 I92112 CS  WHWH13786837        1   
+7 P34473 CS  WHWH14183365        1   
+8 P34473 CS  WHWH14183366        1   
+9 S32273 CS  WHWH14183563        1   
+10 X06373 CS  WHWH14184831        1   
+11 X06373 CS  WHWH14184836        1   
+12 X06373 CS  WHWH14184840        1   
+13 X11114 CS  WHWH14406406        1   
+14 T38003 CS  WHWH14440910        1   
+15 L97708 CS  WHWH14144946        1   
+16 X06373 CS  WHWH14184838        1   
+17 X06373 CS  WHWH14184839        1   
+18 X06373 CS  WHWH14184841        1   
+19 X07063 CS  WHWH14214742        1   
+20 X07063 CS  WHWH14214743        1   
+21 N49832 CS  WHWH14337076        1   
+22 N49832 CS  WHWH14337078        1   
+23 N49832 CS  WHWH14337079        1   
+24 T38003 CS  WHWH14440909        1   
+25 L97708 CT  WHWH14144936        1   
+26 L97708 CT  WHWH14144937        1   
+27 X07063 CT  WHWH14214740        1   
+28 X07063 CT  WHWH14214744        1   
+29 X07063 CT  WHWH14214747        1   
+30 T38003 CT  WHWH14440911        1   
+31 I92017 AN  WHWH13779756        1   
+32 S32998 AN  WHWH14222095        1   
+33 A98978 AN  WHWH14512261        1   
+34 T38003 FW  WHWH14440908        1   
+35 X07063 CD  WHWH14214745        1   
+36 X07063 CD  WHWH14214741        1   
+37 X07063 CD  WHWH14214746        1   
+38 I92018 CS  WHWH13779759        1   
+39 I92018 CS  WHWH13779760        1   
+40 L90794 CS  WHWH13803109        1   
+41 L90794 CS  WHWH13803113        1   
+42 L97053 CS  WHWH14116410        1   
+43 B95203 CS  WHWH14117650        1   
+44 B95203 CS  WHWH14117656        1   
+45 B95203 CS  WHWH14117658        1   
+46 L97081 CS  WHWH14117742        1   
+47 D96408 CS  WHWH14125067        1   
+48 L97708 CS  WHWH14144939        1   
+49 J95897 CS  WHWH14156663        1   
+50 C95904 CS  WHWH14157315        1   
+51 C95904 CS  WHWH14157332        1   
+52 C95904 CS  WHWH14157336        1   
+53 C96119 CS  WHWH14165033        1   
+54 I98722 CS  WHWH14166586        1   
+55 I98722 CS  WHWH14166590        1   
+56 I98722 CS  WHWH14166591        1   
+57 R37085 CS  WHWH14167815        1   
+58 X06053 CS  WHWH14170370        1   
+59 N46733 CS  WHWH14172898        1   
+60 M36265 CS  WHWH14174738        1   
+61  undefined undefined
+62  undefined undefined
+63  undefined undefined
+64  undefined undefined
+65  undefined undefined
+66 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    2 undefined undefined
+67 Renewal Production                                                                                                 Company   :100 undefined undefined
+68  undefined undefined
+69 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+70  Proj  Customized Item   Sort 1    
+71 ------+----------------+------- -------  ----------
+72 U25090 CS  WHWH14177539        1   
+73 P34472 CS  WHWH14183339        1   
+74 U25175 CS  WHWH14183442        1   
+75 T34326 CS  WHWH14184724        1   
+76 R37324 CS  WHWH14186986        1   
+77 R37324 CS  WHWH14186995        1   
+78 X06427 CS  WHWH14188036        1   
+79 X06427 CS  WHWH14188037        1   
+80 N47096 CS  WHWH14194608        1   
+81 U25331 CS  WHWH14195393        1   
+82 N47125 CS  WHWH14196084        1   
+83 N47125 CS  WHWH14196085        1   
+84 T34767 CS  WHWH14215512        1   
+85 T34767 CS  WHWH14215515        1   
+86 T34767 CS  WHWH14215516        1   
+87 T34767 CS  WHWH14215524        1   
+88 T34767 CS  WHWH14215527        1   
+89 U25732 CS  WHWH14226283        1   
+90 U25732 CS  WHWH14226284        1   
+91 U25751 CS  WHWH14227257        1   
+92 U26110 CS  WHWH14254956        1   
+93 U26104 CS  WHWH14254964        1   
+94 R38992 CS  WHWH14332561        1   
+95 R38992 CS  WHWH14332564        1   
+96 P35980 CS  WHWH14390953        1   
+97 P35980 CS  WHWH14390954        1   
+98 P35980 CS  WHWH14390955        1   
+99 T37445 CS  WHWH14400565        1   
+100 R39632 CS  WHWH14400798        1   
+101 X11065 CS  WHWH14403967        1   
+102 F93473 CS  WHWH14418106        1   
+103 X11357 CS  WHWH14418392        1   
+104 X11358 CS  WHWH14418395        1   
+105 U28688 CS  WHWH14438004        1   
+106 S38357 CS  WHWH14468844        1   
+107 P36708 CS  WHWH14478216        1   
+108 N52273 CS  WHWH14480959        1   
+109 N52303 CS  WHWH14483082        1   
+110 S38816 CS  WHWH14493457        1   
+111 T38811 CS  WHWH14498800        1   
+112 T38811 CS  WHWH14498801        1   
+113 T38811 CS  WHWH14498802        1   
+114 P37102 CS  WHWH14514799        1   
+115 S39323 CS  WHWH14519683        1   
+116 I92017 CS  WHWH13779757        1   
+117 L97053 CS  WHWH14116411        1   
+118 B95203 CS  WHWH14117654        1   
+119 B95203 CS  WHWH14117660        1   
+120 L97081 CS  WHWH14117743        1   
+121 D96408 CS  WHWH14125069        1   
+122 L97708 CS  WHWH14144945        1   
+123 J95897 CS  WHWH14156662        1   
+124 C95904 CS  WHWH14157297        1   
+125 C95904 CS  WHWH14157317        1   
+126 C95904 CS  WHWH14157331        1   
+127  undefined undefined
+128  undefined undefined
+129  undefined undefined
+130  undefined undefined
+131  undefined undefined
+132 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    3 undefined undefined
+133 Renewal Production                                                                                                 Company   :100 undefined undefined
+134  undefined undefined
+135 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+136  Proj  Customized Item   Sort 1    
+137 ------+----------------+------- -------  ----------
+138 C95916 CS  WHWH14158080        1   
+139 A98131 CS  WHWH14161491        1   
+140 C96119 CS  WHWH14165034        1   
+141 I98722 CS  WHWH14166584        1   
+142 R37085 CS  WHWH14167813        1   
+143 X06017 CS  WHWH14168056        1   
+144 X06053 CS  WHWH14170369        1   
+145 X06053 CS  WHWH14170371        1   
+146 P34378 CS  WHWH14170548        1   
+147 P34378 CS  WHWH14170549        1   
+148 P34378 CS  WHWH14170550        1   
+149 P34378 CS  WHWH14170553        1   
+150 M36249 CS  WHWH14172617        1   
+151 T34116 CS  WHWH14172630        1   
+152 T34116 CS  WHWH14172631        1   
+153 T34116 CS  WHWH14172632        1   
+154 N46733 CS  WHWH14172896        1   
+155 M36265 CS  WHWH14174737        1   
+156 N46790 CS  WHWH14176202        1   
+157 T34326 CS  WHWH14184723        1   
+158 X06427 CS  WHWH14188038        1   
+159 N47096 CS  WHWH14194611        1   
+160 U25331 CS  WHWH14195391        1   
+161 N47125 CS  WHWH14196083        1   
+162 N47125 CS  WHWH14196086        1   
+163 N47125 CS  WHWH14196087        1   
+164 N47125 CS  WHWH14196088        1   
+165 T34767 CS  WHWH14215511        1   
+166 T34767 CS  WHWH14215523        1   
+167 U25745 CS  WHWH14226935        1   
+168 U25751 CS  WHWH14227255        1   
+169 U26110 CS  WHWH14254957        1   
+170 U26104 CS  WHWH14254963        1   
+171 U26884 CS  WHWH14306894        1   
+172 P35460 CS  WHWH14320137        1   
+173 P35460 CS  WHWH14320138        1   
+174 R38992 CS  WHWH14332559        1   
+175 R38992 CS  WHWH14332562        1   
+176 R38992 CS  WHWH14332563        1   
+177 P35980 CS  WHWH14390956        1   
+178 T37445 CS  WHWH14400564        1   
+179 R39632 CS  WHWH14400797        1   
+180 F93473 CS  WHWH14418110        1   
+181 X11357 CS  WHWH14418391        1   
+182 X11358 CS  WHWH14418394        1   
+183 U28688 CS  WHWH14438006        1   
+184 U29189 CS  WHWH14475173        1   
+185 S38816 CS  WHWH14493456        1   
+186 P36963 CS  WHWH14498418        1   
+187 P36963 CS  WHWH14498450        1   
+188 P36963 CS  WHWH14498495        1   
+189 P36963 CS  WHWH14498524        1   
+190 P36963 CS  WHWH14498550        1   
+191 T38811 CS  WHWH14498798        1   
+192 T38811 CS  WHWH14498799        1   
+193  undefined undefined
+194  undefined undefined
+195  undefined undefined
+196  undefined undefined
+197  undefined undefined
+198 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    4 undefined undefined
+199 Renewal Production                                                                                                 Company   :100 undefined undefined
+200  undefined undefined
+201 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+202  Proj  Customized Item   Sort 1    
+203 ------+----------------+------- -------  ----------
+204 P37102 CS  WHWH14514801        1   
+205 N52843 CS  WHWH14520149        1   
+206 N52843 CS  WHWH14520150        1   
+207 N52843 CS  WHWH14520151        1   
+208 N52843 CS  WHWH14520152        1   
+209 N52843 CS  WHWH14520153        1   
+210 N52843 CS  WHWH14520154        1   
+211 L90961 CT  WHWH13821980        1   
+212 I93631 CT  WHWH13885479        1   
+213 T34767 CT  WHWH14215522        1   
+214 T34767 CT  WHWH14215526        1   
+215 U26060 CT  WHWH14248569        1   
+216 U28380 CT  WHWH14418072        1   
+217 U29189 CT  WHWH14475175        1   
+218 N52544 CT  WHWH14502962        1   
+219 N52637 CT  WHWH14509904        1   
+220 U29824 CT  WHWH14520746        1   
+221 I96649 AN  WHWH14026781        1   
+222 I96649 AN  WHWH14026782        1   
+223 L97187 AN  WHWH14121503        1   
+224 L97189 AN  WHWH14121506        1   
+225 L97189 AN  WHWH14121508        1   
+226 L97189 AN  WHWH14121509        1   
+227 D96462 AN  WHWH14153107        1   
+228 L97943 AN  WHWH14155158        1   
+229 L97943 AN  WHWH14155159        1   
+230 L97943 AN  WHWH14155160        1   
+231 L98013 AN  WHWH14157576        1   
+232 L98130 AN  WHWH14161470        1   
+233 F93136 AN  WHWH14162406        1   
+234 L98159 AN  WHWH14163099        1   
+235 L98159 AN  WHWH14163111        1   
+236 J96075 AN  WHWH14164780        1   
+237 J96075 AN  WHWH14164784        1   
+238 L98215 AN  WHWH14165136        1   
+239 L98215 AN  WHWH14165137        1   
+240 L98215 AN  WHWH14165138        1   
+241 L98232 AN  WHWH14166012        1   
+242 T34048 AN  WHWH14169319        1   
+243 R37136 AN  WHWH14171723        1   
+244 R37136 AN  WHWH14171724        1   
+245 T34103 AN  WHWH14171848        1   
+246 T34116 AN  WHWH14172629        1   
+247 P34403 AN  WHWH14173197        1   
+248 T34174 AN  WHWH14174025        1   
+249 T34174 AN  WHWH14174026        1   
+250 M36265 AN  WHWH14174740        1   
+251 U25090 AN  WHWH14177535        1   
+252 X06188 AN  WHWH14177715        1   
+253 S32332 AN  WHWH14186265        1   
+254 T34494 AN  WHWH14195787        1   
+255 N49175 AN  WHWH14303173        1   
+256 U27302 AN  WHWH14338325        1   
+257 T37443 AN  WHWH14400531        1   
+258 T37446 AN  WHWH14400566        1   
+259  undefined undefined
+260  undefined undefined
+261  undefined undefined
+262  undefined undefined
+263  undefined undefined
+264 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    5 undefined undefined
+265 Renewal Production                                                                                                 Company   :100 undefined undefined
+266  undefined undefined
+267 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+268  Proj  Customized Item   Sort 1    
+269 ------+----------------+------- -------  ----------
+270 X12210 AN  WHWH14457889        1   
+271 U29189 AN  WHWH14475174        1   
+272 T38811 AN  WHWH14498803        1   
+273 H99825 AN  WHWH14511974        1   
+274 B95203 FW  WHWH14117657        1   
+275 L98000 FW  WHWH14156998        1   
+276 N46733 FW  WHWH14172897        1   
+277 T34439 FW  WHWH14191554        1   
+278 U25331 FW  WHWH14195392        1   
+279 U26110 FW  WHWH14254958        1   
+280 U26104 FW  WHWH14254965        1   
+281 T36602 FW  WHWH14341265        1   
+282 S35827 FW  WHWH14352750        1   
+283 F93473 FW  WHWH14418107        1   
+284 F93473 FW  WHWH14418109        1   
+285 U28688 FW  WHWH14438005        1   
+286 S38816 FW  WHWH14493459        1   
+287 S38816 FW  WHWH14493460        1   
+288 H99826 FW  WHWH14511980        1   
+289 S39323 FW  WHWH14519675        1   
+290 S39323 FW  WHWH14519676        1   
+291 S39323 FW  WHWH14519677        1   
+292 S39323 FW  WHWH14519681        1   
+293 S39323 FW  WHWH14519682        1   
+294 N52843 FW  WHWH14520155        1   
+295 N52843 FW  WHWH14520156        1   
+296 N52843 FW  WHWH14520157        1   
+297 N52843 FW  WHWH14520158        1   
+298 N52843 FW  WHWH14520159        1   
+299 X13507 FW  WHWH14521820        1   
+300 S28484 CD  WHWH13844727        1   
+301 X06193 CD  WHWH14177868        1   
+302 S32490 CD  WHWH14193276        1   
+303 U25316 CD  WHWH14195006        1   
+304 T34767 CD  WHWH14215519        1   
+305 T34767 CD  WHWH14215520        1   
+306 T34767 CD  WHWH14215525        1   
+307 X10289 CD  WHWH14369115        1   
+308 T37452 CD  WHWH14400850        1   
+309 T37665 CD  WHWH14414793        1   
+310 T37665 CD  WHWH14414794        1   
+311 T37665 CD  WHWH14414795        1   
+312 T37665 CD  WHWH14414796        1   
+313 T37665 CD  WHWH14414797        1   
+314 T37665 CD  WHWH14414799        1   
+315 T37665 CD  WHWH14414800        1   
+316 N51823 CD  WHWH14455326        1   
+317 P36807 CD  WHWH14486415        1   
+318 B96728 CD  WHWH14504610        1   
+319 N52736 CD  WHWH14514720        1   
+320 P37120 CD  WHWH14516914        1   
+321 S39323 CD  WHWH14519678        1   
+322 S39323 CD  WHWH14519679        1   
+323 S39323 CD  WHWH14519680        1   
+324 N52959 CD  WHWH14525039        1   
+325  undefined undefined
+326  undefined undefined
+327  undefined undefined
+328  undefined undefined
+329  undefined undefined
+330 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    6 undefined undefined
+331 Renewal Production                                                                                                 Company   :100 undefined undefined
+332  undefined undefined
+333 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+334  Proj  Customized Item   Sort 1    
+335 ------+----------------+------- -------  ----------
+336 N52988 CD  WHWH14526188        1   
+337 N52988 CD  WHWH14526189        1   
+338 N52988 CD  WHWH14526190        1   
+339 N52988 CD  WHWH14526191        1   
+340 N52988 CD  WHWH14526192        1   
+341 N52988 CD  WHWH14526193        1   
+342 S38527 CD  WHWH14478311        1   
+343 X11228 CS  WHPN14411324        1   
+344 X11228 CT  WHPN14411325        1   
+345 X13629 CT  WHPN14528133        1   
+346 X11228 CD  WHPN14411323        1   
+347 M38515 CD  WHPN14457755        1   
+348 M38515 CS  WHPN14457753        1   
+349 M38515 CS  WHPN14457758        1   
+350 B96932 CS  WHPN14526697        1   
+351 U28188 CS  WHPN14403201        1   
+352 M38515 CS  WHPN14457752        1   
+353 M38515 CS  WHPN14457757        1   
+354 B96932 CS  WHPN14526859        1   
+355 U28188 CT  WHPN14403203        1   
+356 U28188 CT  WHPN14403205        1   
+357 U28188 CT  WHPN14403212        1   
+358 M38515 CT  WHPN14457747        1   
+359 M38515 CT  WHPN14457751        1   
+360 M38515 CT  WHPN14457756        1   
+361 U28188 FW  WHPN14403210        1   
+362 U28188 CD  WHPN14403200        1   
+363 U28188 CD  WHPN14403202        1   
+364 U28188 CD  WHPN14403207        1   
+365 U28188 CD  WHPN14403209        1   
+366 U28188 CD  WHPN14403211        1   
+367 M38515 CD  WHPN14457754        1   
+368 M38515 CD  WHPN14457760        1   
+369 M38515 CD  WHPN14457761        1   
+370 X11102 CS  WHOK14405697        1   
+371 X11102 CS  WHOK14405699        1   
+372 I94278 CS  WHOK13916661        1   
+373 X11102 CS  WHOK14405696        1   
+374 X11102 CS  WHOK14405698        1   
+375 X07063 CT  WHOK14214721        1   
+376 X07063 CT  WHOK14214724        1   
+377 X07063 CT  WHOK14214739        1   
+378 X07063 CT  WHOK14214748        1   
+379 T38839 CT  WHOK14500803        1   
+380 X07063 AN  WHOK14214723        1   
+381 X07063 CD  WHOK14214722        1   
+382 C96079 CS  WHOK14164061        1   
+383 C96079 CS  WHOK14164064        1   
+384 C96079 CS  WHOK14164067        1   
+385 X06081 CS  WHOK14172220        1   
+386 N49704 CS  WHOK14330230        1   
+387 T38950 CS  WHOK14508281        1   
+388 R40867 CS  WHOK14519594        1   
+389 I92017 CS  WHOK13779755        1   
+390 C96079 CS  WHOK14164062        1   
+391  undefined undefined
+392  undefined undefined
+393  undefined undefined
+394  undefined undefined
+395  undefined undefined
+396 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    7 undefined undefined
+397 Renewal Production                                                                                                 Company   :100 undefined undefined
+398  undefined undefined
+399 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+400  Proj  Customized Item   Sort 1    
+401 ------+----------------+------- -------  ----------
+402 C96079 CS  WHOK14164066        1   
+403 C96079 CS  WHOK14164068        1   
+404 X06081 CS  WHOK14172222        1   
+405 N49704 CS  WHOK14330229        1   
+406 T38950 CS  WHOK14508279        1   
+407 T38950 CS  WHOK14508280        1   
+408 R40867 CS  WHOK14519599        1   
+409 B96876 CT  WHOK14518452        1   
+410 C96079 FW  WHOK14164065        1   
+411 X06081 FW  WHOK14172221        1   
+412 N49704 FW  WHOK14330231        1   
+413 N49704 FW  WHOK14330233        1   
+414 N49704 FW  WHOK14330234        1   
+415 T38950 FW  WHOK14508277        1   
+416 T38950 FW  WHOK14508278        1   
+417 R40867 FW  WHOK14519596        1   
+418 R40867 FW  WHOK14519597        1   
+419 R40867 FW  WHOK14519598        1   
+420 I94283 CS  WHCV13916687        1   
+421 I94283 CS  WHCV13916691        1   
+422 I94283 CS  WHCV13916692        1   
+423 X06424 CS  WHCV14188004        1   
+424 X06424 CS  WHCV14188006        1   
+425 I94283 CS  WHCV13916694        1   
+426 I94283 CS  WHCV13916696        1   
+427 I94283 CS  WHCV13916697        1   
+428 I94283 CS  WHCV13916699        1   
+429 I94283 CS  WHCV13916700        1   
+430 I94283 CS  WHCV13916701        1   
+431 X06424 CS  WHCV14187983        1   
+432 X06424 CS  WHCV14188005        1   
+433 X06424 CS  WHCV14188008        1   
+434 X06424 CS  WHCV14188009        1   
+435 X06424 CS  WHCV14188010        1   
+436 X06424 AN  WHCV14187981        1   
+437 I94283 FW  WHCV13916693        1   
+438 X06424 FW  WHCV14187984        1   
+439 X06424 FW  WHCV14188011        1   
+440 H99842 CS  TTWH14524330        1   
+441 H99842 CS  TTWH14524367        1   
+442 H99842 CS  TTWH14524277        1   
+443 H99842 CS  TTWH14524370        1   
+444 S39433 FW  STWH14527161        1   
+445 S39433 FW  STWH14527186        1   
+446 C94086 CS  STWH14089662        1   
+447 C94086 CS  STWH14089668        1   
+448 C94086 CS  STWH14089669        1   
+449 L97497 CS  STWH14133957        1   
+450 L97497 CS  STWH14133965        1   
+451 L97497 CS  STWH14133971        1   
+452 J95976 CS  STWH14160632        1   
+453 N46730 CS  STWH14172125        1   
+454 X06113 CS  STWH14173682        1   
+455 X06113 CS  STWH14173687        1   
+456 X06113 CS  STWH14173697        1   
+457  undefined undefined
+458  undefined undefined
+459  undefined undefined
+460  undefined undefined
+461  undefined undefined
+462 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    8 undefined undefined
+463 Renewal Production                                                                                                 Company   :100 undefined undefined
+464  undefined undefined
+465 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+466  Proj  Customized Item   Sort 1    
+467 ------+----------------+------- -------  ----------
+468 R37342 CS  STWH14189496        1   
+469 M36620 CS  STWH14221094        1   
+470 M36620 CS  STWH14221095        1   
+471 T38376 CS  STWH14465048        1   
+472 T38377 CS  STWH14465337        1   
+473 T38377 CS  STWH14465346        1   
+474 T38424 CS  STWH14468012        1   
+475 T38424 CS  STWH14468089        1   
+476 T38431 CS  STWH14468218        1   
+477 J96963 CS  STWH14470599        1   
+478 B96565 CS  STWH14485504        1   
+479 S39115 CS  STWH14507521        1   
+480 M38960 CS  STWH14508549        1   
+481 C94086 CS  STWH14089663        1   
+482 C94086 CS  STWH14089664        1   
+483 L97191 CS  STWH14121512        1   
+484 L97191 CS  STWH14121513        1   
+485 L97191 CS  STWH14121514        1   
+486 L97497 CS  STWH14133958        1   
+487 L97497 CS  STWH14133972        1   
+488 L97497 CS  STWH14133986        1   
+489 J95976 CS  STWH14160631        1   
+490 N46730 CS  STWH14172122        1   
+491 X06113 CS  STWH14173681        1   
+492 X06113 CS  STWH14173686        1   
+493 R37342 CS  STWH14189497        1   
+494 M36620 CS  STWH14221093        1   
+495 S36972 CS  STWH14404714        1   
+496 T38376 CS  STWH14465095        1   
+497 T38377 CS  STWH14465339        1   
+498 T38377 CS  STWH14465367        1   
+499 T38424 CS  STWH14468036        1   
+500 J96963 CS  STWH14470604        1   
+501 S39115 CS  STWH14507520        1   
+502 M38960 CS  STWH14508548        1   
+503 M36620 CT  STWH14221090        1   
+504 T36819 CT  STWH14357573        1   
+505 T36819 CT  STWH14357576        1   
+506 T38376 CT  STWH14464952        1   
+507 T38376 CT  STWH14464981        1   
+508 T38376 CT  STWH14464993        1   
+509 T38376 CT  STWH14465115        1   
+510 T38376 CT  STWH14465136        1   
+511 T38376 CT  STWH14465151        1   
+512 T38431 CT  STWH14468225        1   
+513 T38431 CT  STWH14468241        1   
+514 T38431 CT  STWH14468256        1   
+515 T38431 CT  STWH14468270        1   
+516 T38431 CT  STWH14468311        1   
+517 T38431 CT  STWH14468351        1   
+518 N52196 CT  STWH14477710        1   
+519 A98916 CT  STWH14502549        1   
+520 T36819 CT  STWH14357577        1   
+521 M36352 AN  STWH14184712        1   
+522 P37202 AN  STWH14523830        1   
+523  undefined undefined
+524  undefined undefined
+525  undefined undefined
+526  undefined undefined
+527  undefined undefined
+528 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :    9 undefined undefined
+529 Renewal Production                                                                                                 Company   :100 undefined undefined
+530  undefined undefined
+531 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+532  Proj  Customized Item   Sort 1    
+533 ------+----------------+------- -------  ----------
+534 H99843 AN  STWH14527194        1   
+535 L97497 FW  STWH14133963        1   
+536 L97497 FW  STWH14133964        1   
+537 L97497 FW  STWH14133983        1   
+538 L97497 FW  STWH14133984        1   
+539 L97497 FW  STWH14133985        1   
+540 X06113 FW  STWH14173683        1   
+541 X06113 FW  STWH14173684        1   
+542 X06113 FW  STWH14173685        1   
+543 X06113 FW  STWH14173688        1   
+544 X06113 FW  STWH14173698        1   
+545 X06113 FW  STWH14173700        1   
+546 X06113 FW  STWH14173701        1   
+547 X06113 FW  STWH14173702        1   
+548 X06113 FW  STWH14173703        1   
+549 X06113 FW  STWH14173704        1   
+550 M36620 FW  STWH14221092        1   
+551 T36819 FW  STWH14357575        1   
+552 T38376 FW  STWH14465068        1   
+553 T38424 FW  STWH14468062        1   
+554 T38431 FW  STWH14468214        1   
+555 J96963 FW  STWH14470615        1   
+556 L97497 CD  STWH14133959        1   
+557 L97497 CD  STWH14133960        1   
+558 L97497 CD  STWH14133961        1   
+559 L97497 CD  STWH14133962        1   
+560 L97497 CD  STWH14133973        1   
+561 L97497 CD  STWH14133974        1   
+562 L97497 CD  STWH14133976        1   
+563 L97497 CD  STWH14133978        1   
+564 L97497 CD  STWH14133980        1   
+565 L97497 CD  STWH14133982        1   
+566 L97497 CD  STWH14133987        1   
+567 M36620 CD  STWH14221088        1   
+568 T36819 CD  STWH14357574        1   
+569 T38376 CD  STWH14465006        1   
+570 T38376 CD  STWH14465027        1   
+571 T38377 CD  STWH14465334        1   
+572 T38377 CD  STWH14465335        1   
+573 T38431 CD  STWH14468215        1   
+574 T38431 CD  STWH14468216        1   
+575 T38431 CD  STWH14468219        1   
+576 T38431 CD  STWH14468222        1   
+577 X13223 CD  STWH14506963        1   
+578 M38960 CD  STWH14508547        1   
+579 T34773 CS  STST14216079        1   
+580 S39371 CS  STST14522767        1   
+581 S39371 CS  STST14522772        1   
+582 S39371 CS  STST14522776        1   
+583 S39371 CS  STST14522778        1   
+584 I93756 CS  STST13891000        1   
+585 S39371 CS  STST14522768        1   
+586 S39371 CS  STST14522773        1   
+587 S39371 CS  STST14522777        1   
+588 S39371 CS  STST14522780        1   
+589  undefined undefined
+590  undefined undefined
+591  undefined undefined
+592  undefined undefined
+593  undefined undefined
+594 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :   10 undefined undefined
+595 Renewal Production                                                                                                 Company   :100 undefined undefined
+596  undefined undefined
+597 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+598  Proj  Customized Item   Sort 1    
+599 ------+----------------+------- -------  ----------
+600 X13177 CT  STST14504520        1   
+601 I93756 AN  STST13891002        1   
+602 S39371 AN  STST14522769        1   
+603 I93756 CD  STST13890996        1   
+604 I93756 CD  STST13890997        1   
+605 T34773 CD  STST14216077        1   
+606 T34773 CD  STST14216080        1   
+607 S39371 CD  STST14522766        1   
+608 S39371 CD  STST14522770        1   
+609 S39371 CD  STST14522771        1   
+610 S39371 CD  STST14522774        1   
+611 S39371 CD  STST14522775        1   
+612 S39371 CD  STST14522779        1   
+613 L92511 CS  STST13917465        1   
+614 C93392 CS  STST14059750        1   
+615 C93392 CS  STST14059758        1   
+616 C93392 CS  STST14059773        1   
+617 C95857 CS  STST14155125        1   
+618 C95857 CS  STST14155130        1   
+619 C95857 CS  STST14155142        1   
+620 X06349 CS  STST14184766        1   
+621 N46962 CS  STST14187314        1   
+622 N46962 CS  STST14187316        1   
+623 N46962 CS  STST14187318        1   
+624 N46962 CS  STST14187320        1   
+625 U25369 CS  STST14197784        1   
+626 M37731 CS  STST14359920        1   
+627 M37731 CS  STST14372829        1   
+628 N51571 CS  STST14439307        1   
+629 T38552 CS  STST14478591        1   
+630 B96775 CS  STST14511204        1   
+631 B96775 CS  STST14511222        1   
+632 C93392 CS  STST14059754        1   
+633 C93392 CS  STST14059762        1   
+634 C93392 CS  STST14059775        1   
+635 C95857 CS  STST14155127        1   
+636 C95857 CS  STST14155132        1   
+637 C95857 CS  STST14155143        1   
+638 B95371 CS  STST14157951        1   
+639 R37263 CS  STST14181508        1   
+640 X06349 CS  STST14184765        1   
+641 N46962 CS  STST14187313        1   
+642 N46962 CS  STST14187317        1   
+643 N46962 CS  STST14187319        1   
+644 N46962 CS  STST14187321        1   
+645 U25369 CS  STST14197782        1   
+646 M37731 CS  STST14359918        1   
+647 N51571 CS  STST14439304        1   
+648 N51571 CS  STST14439305        1   
+649 N51571 CS  STST14439306        1   
+650 T38552 CS  STST14478593        1   
+651 B96775 CS  STST14511218        1   
+652 B96775 CS  STST14511225        1   
+653 C93392 CT  STST14059760        1   
+654 C93392 CT  STST14059764        1   
+655  undefined undefined
+656  undefined undefined
+657  undefined undefined
+658  undefined undefined
+659  undefined undefined
+660 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :   11 undefined undefined
+661 Renewal Production                                                                                                 Company   :100 undefined undefined
+662  undefined undefined
+663 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+664  Proj  Customized Item   Sort 1    
+665 ------+----------------+------- -------  ----------
+666 C93392 CT  STST14059765        1   
+667 C93392 CT  STST14059768        1   
+668 C93392 CT  STST14059769        1   
+669 C93392 CT  STST14059776        1   
+670 C93392 CT  STST14059777        1   
+671 C93392 CT  STST14059780        1   
+672 U28554 CT  STST14432076        1   
+673 B96775 CT  STST14511343        1   
+674 B96775 CT  STST14511347        1   
+675 B96775 CT  STST14511350        1   
+676 I93930 CT  STST13900493        1   
+677 C93392 CT  STST14059761        1   
+678 L97171 AN  STST14120500        1   
+679 C95330 AN  STST14138684        1   
+680 C95330 AN  STST14138688        1   
+681 B95342 AN  STST14152506        1   
+682 B95370 AN  STST14158043        1   
+683 J95975 AN  STST14160626        1   
+684 R37134 AN  STST14171658        1   
+685 X06418 AN  STST14187511        1   
+686 X06430 AN  STST14188050        1   
+687 R37338 AN  STST14188693        1   
+688 R37338 AN  STST14188701        1   
+689 N48614 AN  STST14275318        1   
+690 B96775 AN  STST14511203        1   
+691 C93392 FW  STST14059751        1   
+692 C93392 FW  STST14059752        1   
+693 C93392 FW  STST14059756        1   
+694 C93392 FW  STST14059759        1   
+695 C93392 FW  STST14059763        1   
+696 C93392 FW  STST14059774        1   
+697 N46962 FW  STST14187315        1   
+698 U25369 FW  STST14197783        1   
+699 M37731 FW  STST14359919        1   
+700 T38552 FW  STST14478592        1   
+701 B96909 FW  STST14524376        1   
+702 I93756 CD  STST13891001        1   
+703 I93756 CD  STST13891003        1   
+704 C93392 CD  STST14059757        1   
+705 C93392 CD  STST14059766        1   
+706 C93392 CD  STST14059767        1   
+707 C93392 CD  STST14059770        1   
+708 C93392 CD  STST14059772        1   
+709 C93392 CD  STST14059778        1   
+710 C93392 CD  STST14059779        1   
+711 C95857 CD  STST14155126        1   
+712 C95857 CD  STST14155128        1   
+713 C95857 CD  STST14155129        1   
+714 C95857 CD  STST14155134        1   
+715 C95857 CD  STST14155135        1   
+716 C95857 CD  STST14155136        1   
+717 C95857 CD  STST14155137        1   
+718 C95857 CD  STST14155138        1   
+719 C95857 CD  STST14155139        1   
+720 C95857 CD  STST14155141        1   
+721  undefined undefined
+722  undefined undefined
+723  undefined undefined
+724  undefined undefined
+725  undefined undefined
+726 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :   12 undefined undefined
+727 Renewal Production                                                                                                 Company   :100 undefined undefined
+728  undefined undefined
+729 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+730  Proj  Customized Item   Sort 1    
+731 ------+----------------+------- -------  ----------
+732 C95857 CD  STST14155144        1   
+733 C95857 CD  STST14155145        1   
+734 C95857 CD  STST14155147        1   
+735 C95857 CD  STST14155148        1   
+736 N46962 CD  STST14187322        1   
+737 N46962 CD  STST14187323        1   
+738 N48575 CD  STST14271842        1   
+739 U26454 CD  STST14277141        1   
+740 N51685 CD  STST14445843        1   
+741 N51685 CD  STST14445844        1   
+742 B96775 CD  STST14511231        1   
+743 B96775 CD  STST14511233        1   
+744 B96775 CD  STST14511236        1   
+745 B96775 CD  STST14511239        1   
+746 B96775 CD  STST14511274        1   
+747 B96775 CD  STST14511302        1   
+748 X06349 CS  STPN14184762        1   
+749 X06349 CS  STPN14184764        1   
+750 X06349 CS  STPN14184761        1   
+751 X06349 CS  STPN14184763        1   
+752 X06349 CS  STPN14184788        1   
+753 M38525 CS  STPN14459289        1   
+754 M38525 CS  STPN14459291        1   
+755 M38525 CS  STPN14459298        1   
+756 M38638 CS  STPN14470734        1   
+757 M38638 CS  STPN14470735        1   
+758 M38525 CT  STPN14459299        1   
+759 M38638 CT  STPN14470729        1   
+760 M38638 CT  STPN14470731        1   
+761 M38525 CT  STPN14459301        1   
+762 M38638 FW  STPN14470732        1   
+763 M38638 CD  STPN14470728        1   
+764 M38638 CD  STPN14470733        1   
+765 M38638 CD  STPN14470737        1   
+766 M38525 CD  STPN14459287        1   
+767 T39195 CS  STPN14525865        1   
+768 X06349 CS  STPN14184760        1   
+769 S36878 CS  STPN14400912        1   
+770 T39195 CS  STPN14525866        1   
+771 M38510 CT  STPN14457681        1   
+772 M38510 CT  STPN14457682        1   
+773 H99804 CT  STPN14500025        1   
+774 T39206 CT  STPN14526242        1   
+775 X06349 AN  STPN14184790        1   
+776 T39195 FW  STPN14525861        1   
+777 T39195 FW  STPN14525870        1   
+778 X10966 CS  STOK14399856        1   
+779 X10966 CS  STOK14399859        1   
+780 X10966 CD  STOK14399855        1   
+781 X10966 CD  STOK14399857        1   
+782 X10966 CD  STOK14399858        1   
+783 M37967 CS  STOK14390812        1   
+784 P36924 CS  STOK14495126        1   
+785 P36924 CS  STOK14495180        1   
+786 M37967 CS  STOK14390811        1   
+787  undefined undefined
+788  undefined undefined
+789  undefined undefined
+790  undefined undefined
+791  undefined undefined
+792 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :   13 undefined undefined
+793 Renewal Production                                                                                                 Company   :100 undefined undefined
+794  undefined undefined
+795 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+796  Proj  Customized Item   Sort 1    
+797 ------+----------------+------- -------  ----------
+798 C94086 CT  STOK14089665        1   
+799 C94086 CD  STOK14089666        1   
+800 C94086 CD  STOK14089667        1   
+801 C94086 CD  STOK14089670        1   
+802 P36924 CD  STOK14495148        1   
+803 P36924 CD  STOK14495149        1   
+804 P36924 CD  STOK14495150        1   
+805 P36924 CD  STOK14495151        1   
+806 S39044 CD  STOK14504454        1   
+807 X13422 CD  STOK14516572        1   
+808 J96963 CS  STMP14470567        1   
+809 J96963 CS  STMP14470602        1   
+810 T38377 CT  STMP14465329        1   
+811 T38377 CT  STMP14465330        1   
+812 T38377 CT  STMP14465332        1   
+813 J96963 FW  STMP14470611        1   
+814 T34912 CS  STCV14228281        1   
+815 T34912 CT  STCV14228277        1   
+816 T34912 CT  STCV14228278        1   
+817 T34332 AN  STCV14184972        1   
+818 M38088 AN  STCV14403012        1   
+819 T34912 FW  STCV14228282        1   
+820 T34912 FW  STCV14228283        1   
+821 T34332 CD  STCV14184986        1   
+822 T34332 CD  STCV14184988        1   
+823 T34332 CD  STCV14184990        1   
+824 T34912 CD  STCV14228280        1   
+825 X10255 AN  FGWH14367581        1   
+826 P35658 CD  FGWH14345936        1   
+827 P35658 CD  FGWH14345937        1   
+828 P35658 CD  FGWH14345939        1   
+829 P35658 CD  FGWH14345940        1   
+830 X10255 CS  FGPN14367563        1   
+831 X10255 CS  FGPN14367565        1   
+832 X10255 CS  FGPN14367572        1   
+833 X10255 CS  FGPN14367575        1   
+834 X10255 CS  FGPN14367569        1   
+835 X10255 CS  FGPN14367573        1   
+836 X10255 AN  FGPN14367564        1   
+837 U25260 CS  CBWH14190091        1   
+838 U25260 CS  CBWH14190088        1   
+839 N51165 CS  CBWH14411471        1   
+840 N51165 CS  CBWH14411509        1   
+841 T37898 CS  CBWH14432788        1   
+842 S39034 CT  CBWH14503691        1   
+843 C93698 CS  CBPN14074475        1   
+844 M36273 CS  CBPN14175890        1   
+845 C93698 CS  CBPN14074477        1   
+846 M36273 CS  CBPN14175889        1   
+847 M36273 CS  CBPN14175891        1   
+848 C93698 FW  CBPN14074476        1   
+849 U26100 CS  CBCV14254519        1   
+850 U26100 CS  CBCV14254517        1   
+851 L97115 AN  CBCV14118788        1   
+852 U26100 FW  CBCV14254518        1   
+853  undefined undefined
+854  undefined undefined
+855  undefined undefined
+856  undefined undefined
+857  undefined undefined
+858 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :   14 undefined undefined
+859 Renewal Production                                                                                                 Company   :100 undefined undefined
+860  undefined undefined
+861 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+862  Proj  Customized Item   Sort 1    
+863 ------+----------------+------- -------  ----------
+864 X11114 CS  BKWH14406395        1   
+865 X11114 CS  BKWH14406399        1   
+866 X11114 CS  BKWH14406402        1   
+867 X11114 CS  BKWH14406409        1   
+868 X11114 CS  BKWH14406411        1   
+869 X11114 CS  BKWH14406396        1   
+870 X11114 CS  BKWH14406400        1   
+871 X11114 CS  BKWH14406401        1   
+872 X11114 CS  BKWH14406403        1   
+873 X11114 CS  BKWH14406410        1   
+874 X11114 CS  BKWH14406412        1   
+875 B95170 CS  BKWH14113026        1   
+876 B95170 CS  BKWH14113027        1   
+877 B95170 CS  BKWH14113028        1   
+878 L97083 CS  BKWH14117766        1   
+879 L97083 CS  BKWH14117770        1   
+880 L97083 CS  BKWH14117772        1   
+881 P35890 CS  BKWH14376464        1   
+882 J96980 CS  BKWH14478093        1   
+883 L97083 CS  BKWH14117768        1   
+884 L98228 CS  BKWH14165714        1   
+885 L97083 AN  BKWH14117774        1   
+886 L97764 AN  BKWH14146284        1   
+887 L97764 AN  BKWH14146288        1   
+888 B95343 AN  BKWH14152515        1   
+889 L97083 FW  BKWH14117767        1   
+890 L97083 FW  BKWH14117771        1   
+891 L97083 CD  BKWH14117764        1   
+892 S37938 CT  BKPN14450455        1   
+893 X07394 CS  BKBK14229726        1   
+894 X07394 CS  BKBK14229736        1   
+895 X07394 CT  BKBK14229739        1   
+896 X07394 CT  BKBK14229738        1   
+897 L96804 AN  BKBK14104276        1   
+898 X07394 AN  BKBK14229731        1   
+899 A98127 FW  BKBK14161416        1   
+900 X07394 FW  BKBK14229735        1   
+901 C95806 CS  BKBK14153819        1   
+902 C95806 CS  BKBK14153823        1   
+903 C95806 CS  BKBK14153824        1   
+904 C95806 CS  BKBK14153825        1   
+905 C95806 CS  BKBK14153826        1   
+906 C95806 CS  BKBK14153827        1   
+907 C95806 CS  BKBK14153828        1   
+908 C95806 CS  BKBK14153832        1   
+909 C95806 CS  BKBK14153833        1   
+910 C95806 CS  BKBK14153834        1   
+911 C95806 CS  BKBK14153835        1   
+912 C95806 CS  BKBK14153836        1   
+913 X06015 CS  BKBK14167925        1   
+914 R37150 CS  BKBK14172342        1   
+915 R37150 CS  BKBK14172364        1   
+916 R37204 CS  BKBK14176658        1   
+917 R37204 CS  BKBK14176659        1   
+918 P34556 CS  BKBK14194385        1   
+919  undefined undefined
+920  undefined undefined
+921  undefined undefined
+922  undefined undefined
+923  undefined undefined
+924 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :   15 undefined undefined
+925 Renewal Production                                                                                                 Company   :100 undefined undefined
+926  undefined undefined
+927 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+928  Proj  Customized Item   Sort 1    
+929 ------+----------------+------- -------  ----------
+930 N50132 CS  BKBK14351169        1   
+931 T38239 CS  BKBK14454796        1   
+932 U29196 CS  BKBK14475394        1   
+933 U29196 CS  BKBK14475397        1   
+934 U29196 CS  BKBK14475400        1   
+935 U29196 CS  BKBK14475401        1   
+936 U29196 CS  BKBK14475402        1   
+937 U29196 CS  BKBK14475403        1   
+938 U29196 CS  BKBK14475405        1   
+939 U29196 CS  BKBK14475407        1   
+940 U29196 CS  BKBK14475409        1   
+941 U29196 CS  BKBK14475419        1   
+942 U29196 CS  BKBK14475422        1   
+943 U29196 CS  BKBK14475432        1   
+944 U29196 CS  BKBK14475434        1   
+945 U29196 CS  BKBK14475435        1   
+946 L96317 CS  BKBK14082119        1   
+947 C95593 CS  BKBK14145420        1   
+948 C95593 CS  BKBK14145421        1   
+949 C95806 CS  BKBK14153821        1   
+950 C95806 CS  BKBK14153830        1   
+951 X06015 CS  BKBK14167923        1   
+952 R37150 CS  BKBK14172344        1   
+953 R37150 CS  BKBK14172359        1   
+954 R37150 CS  BKBK14172362        1   
+955 R37204 CS  BKBK14176660        1   
+956 P34556 CS  BKBK14194386        1   
+957 N50132 CS  BKBK14351164        1   
+958 N50132 CS  BKBK14351166        1   
+959 N50132 CS  BKBK14351173        1   
+960 N50132 CS  BKBK14351177        1   
+961 N50132 CS  BKBK14351180        1   
+962 N50701 CS  BKBK14386680        1   
+963 U29196 CS  BKBK14475396        1   
+964 U29196 CS  BKBK14475399        1   
+965 U29196 CS  BKBK14475404        1   
+966 U29196 CS  BKBK14475406        1   
+967 U29196 CS  BKBK14475408        1   
+968 U29196 CS  BKBK14475414        1   
+969 U29196 CS  BKBK14475415        1   
+970 U29196 CS  BKBK14475420        1   
+971 U29196 CS  BKBK14475424        1   
+972 U29196 CS  BKBK14475433        1   
+973 U29196 CS  BKBK14475436        1   
+974 C95806 CT  BKBK14153822        1   
+975 C95806 CT  BKBK14153831        1   
+976 X13305 CT  BKBK14510307        1   
+977 N52995 CT  BKBK14527199        1   
+978 N52995 CT  BKBK14527215        1   
+979 N52995 CT  BKBK14527233        1   
+980 I94262 AN  BKBK13916279        1   
+981 I94262 AN  BKBK13916281        1   
+982 C94037 AN  BKBK14087337        1   
+983 C94037 AN  BKBK14087338        1   
+984 C94037 AN  BKBK14087351        1   
+985  undefined undefined
+986  undefined undefined
+987  undefined undefined
+988  undefined undefined
+989  undefined undefined
+990 Date   : 01-06-2023 [13:12]                 PRINT/EXPORT PRESEQ VALUES FROM AWPCS509 TEMP TABLE                   Page       :   16 undefined undefined
+991 Renewal Production                                                                                                 Company   :100 undefined undefined
+992  undefined undefined
+993 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- undefined undefined
+994  Proj  Customized Item   Sort 1    
+995 ------+----------------+------- -------  ----------
+996 L97860 AN  BKBK14150181        1   
+997 L97860 AN  BKBK14150182        1   
+998 L97860 AN  BKBK14150183        1   
+999 J95957 AN  BKBK14159337        1   
+1000 J95957 AN  BKBK14159338        1   
+1001 J95957 AN  BKBK14159340        1   
+1002 X06015 AN  BKBK14167917        1   
+1003 X06015 AN  BKBK14167928        1   
+1004 X06015 AN  BKBK14167929        1   
+1005 R37204 AN  BKBK14176661        1   
+1006 N50132 AN  BKBK14351165        1   
+1007 N50132 AN  BKBK14351174        1   
+1008 X09985 AN  BKBK14355549        1   
+1009 P36749 AN  BKBK14481079        1   
+1010 C95806 FW  BKBK14153820        1   
+1011 C95806 FW  BKBK14153829        1   
+1012 X06015 FW  BKBK14167924        1   
+1013 U29196 FW  BKBK14475395        1   
+1014 U29196 FW  BKBK14475398        1   
+1015 U29196 FW  BKBK14475410        1   
+1016 N47016 CD  BKBK14189893        1   
+1017 N50132 CD  BKBK14351167        1   
+1018 N50132 CD  BKBK14351171        1   
+1019 N50132 CD  BKBK14351178        1   
+1020 N50132 CD  BKBK14351179        1   
+1021 N50132 CD  BKBK14351181        1   
+1022 N50701 CD  BKBK14386681        1   
+1023 S38926 CD  BKBK14499506        1   
+1024 X13303 CD  BKBK14510171        1   

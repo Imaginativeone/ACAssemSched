@@ -4,6 +4,7 @@ import router from './router'
 // import VueExcelEditor from 'vue3-excel-editor'
 
 import PrimeVue from 'primevue/config'
+// import {ripple} from 'primevue'
 // import Button from "primevue/button"
 import TabMenu from "primevue/tabmenu"
 import DataTable from 'primevue/datatable'
@@ -25,7 +26,7 @@ createApp(App).use(router).mount('#app')
 // App.use(VueExcelEditor)
 
 /* PrimeVue Components */ 
-App.use(PrimeVue, {ripple: true});
+App.component('PrimeVue', PrimeVue);
 // App.use(ToastService);
 // Aapp.directive('tooltip', Tooltip);
 // App.component('Button', Button);
