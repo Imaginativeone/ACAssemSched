@@ -26,18 +26,19 @@ router.get("/assemFiles:Id", (req, res) => {
       });
   });
 
-router.post("/assemFiles", (req, res) => {
+router.post("/assemFiles", async (req, res) => {
   const { fileName, id, owner, processed, createdAt } = req.body;
-  return sequelize.models.assemFile
-    .create({ fileName, owner, processed, id, createdAt })
-    .then((data) => res.send(data))
-    .catch((err) => {
-      console.log(
-        "***There was an error creating a the file in the database",
-        JSON.stringify(contact)
-      );
-      return res.status(400).send(err);
-    });
+  try {
+    const data = await sequelize.models.assemFile
+      .create({ fileName, owner, processed, id, createdAt });
+    return res.send(data);
+  } catch (err) {
+    console.log(
+      "***There was an error creating a the file in the database",
+      JSON.stringify(contact)
+    );
+    return res.status(400).send(err);
+  }
 });
 
 router.delete("/assemFile/:id", (req, res) => {
@@ -52,27 +53,13 @@ router.delete("/assemFile/:id", (req, res) => {
     });
 });
 
-// router.put("/assemFile/:id", (req, res) => {
-//   const id = req.params.id;
-//   return sequelize.models.assemFile.findById(id).then((fileName) => {
-//     const { fileName, owner } = req.body;
-//     return user
-//       .update({ fileName, owner })
-//       .then(() => res.send(user))
-//       .catch((err) => {
-//         console.log("***Error updating file", JSON.stringify(err));
-//         res.status(400).send(err);
-//       });
-//   });
-// });
 
-
-/* --------- Read Assem Data ------- */
-router.get("/assemFileData/:id", async (req, res) => {
+/* *****************--------- Read Assem Data -------***************************** */
+router.get("/assemFileData/", async (req, res) => {
   // TODO: Parse data from file
-  const assemfileData = sequelize.models.assemfileData;
+  const assemfileData = sequelize.models.assemFileData;
   return sequelize.models.assemfileData
-    .findAll({where: {assemFileId:req.params.id}})
+    .findAll({where: {assemFileData:req.params.body}})
     .then((data) => res.send(data))
     .catch((err) => {
       console.log("There was an error querying file data", JSON.stringify(err));

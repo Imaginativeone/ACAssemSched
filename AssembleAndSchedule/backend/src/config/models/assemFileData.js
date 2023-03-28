@@ -1,20 +1,29 @@
-import assemdb from "../database.js";
-import './assemFile.js'
-import {Model, DataTypes} from 'sequelize'
+import assemdb from "../../database.js";
+import AssemFile from "./assemFile.js";
+import { Model, DataTypes } from "sequelize";
 
 class AssemFileData extends Model {
-    getProject(){
-        return [this.proj_no, this.customized_item, this.upd_grp, this.upd_seq, this.grille, this.plan_fin_dt];
-    }
-};
-AssemFileData.init({
-    id:{ type: DataTypes.STRING,
-    primaryKey: true
+  getProject() {
+    return [
+      this.proj_no,
+      this.customized_item,
+      this.upd_grp,
+      this.upd_seq,
+      this.grille,
+      this.plan_fin_dt,
+    ];
+  }
+}
+AssemFileData.init(
+  {
+    id: { type: DataTypes.STRING, primaryKey: true },
+    file_id: {
+      type: DataTypes.STRING,
+      references: {
+        model: "AssemFile",
+        key: "id",
+      },
     },
-    file_id: {type: DataTypes.STRING, references:{
-        model:'AssemFile',
-        key: 'id'
-    }},
     proj_no: DataTypes.STRING,
     customized_item: DataTypes.STRING,
     upd_grp: DataTypes.STRING,
@@ -38,13 +47,12 @@ AssemFileData.init({
     feat7: DataTypes.STRING,
     lino: DataTypes.STRING,
     prp_qty: DataTypes.STRING,
-    color_type: DataTypes.STRING
+    color_type: DataTypes.STRING,
+  },
+  { sequelize: assemdb, modelName: "assemFileData" }
+);
 
-}, {assemdb, modelName: 'assemFileData'});
-
-AssemFileData.belongsTo(AssemFile, {onDelete: 'CASCADE' })
-(async () => {
-    await assemdb.sync();
+AssemFileData.belongsTo(AssemFile, { onDelete: "CASCADE" })(async () => {
+  await assemdb.sync();
 })();
 export default AssemFileData;
-
