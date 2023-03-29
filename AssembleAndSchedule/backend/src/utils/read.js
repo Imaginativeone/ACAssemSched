@@ -2,11 +2,12 @@ import { count } from "console";
 import fs from "fs";
 import readline from "readline";
 import AssemFileData from "../config/models/assemFileData.js";
-// const readline = require("readline");
+
+const readFileLocation = "../uploadedFiles/file.txt "
 
 async function readCreateData() {
-  const readFileLocation = "../../uploadedFiles/file.txt";
-  const writeFileLocation = "../../uploadedFiles/Answer.txt";
+//   const readFileLocation = "../uploadedFiles/test.txt "
+  const writeFileLocation = "../uploadedFiles/Answer.txt";
   const text = fs.createReadStream(readFileLocation, "utf-8");
 
   const rl = readline.createInterface({
@@ -66,8 +67,8 @@ async function readCreateData() {
 }
 readCreateData();
 
-const writeFileToDatabse = (data) => {
-  fs.appendFile(writeFileLocation, data, "utf-8", (err) => {
-    if (err) console.log(err);
-  });
-};
+// const writeFileToDatabse = (data) => {
+//   fs.appendFile(readFileLocation, data, "utf-8", (err) => {
+//     if (err) console.log(err);
+//   });
+// };
