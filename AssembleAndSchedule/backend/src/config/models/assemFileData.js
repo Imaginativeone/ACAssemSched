@@ -56,7 +56,8 @@ AssemFileData.init(
 AssemFile.hasMany(AssemFileData, {foreignKey: 'file_id'})
 
 // AssemFileData.belongsTo(AssemFile, {onDelete: "CASCADE"})
-AssemFileData.belongsTo(AssemFile, { onDelete: "CASCADE" })(async () => {
-  await assemdb.sync();
-})();
+AssemFileData.belongsTo(AssemFile, { onDelete: "CASCADE" });
+// (async () => {
+  // await assemdb.sync();
+// })();
 export default AssemFileData;

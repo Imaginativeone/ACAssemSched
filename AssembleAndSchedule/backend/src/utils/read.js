@@ -2,11 +2,14 @@ import { count } from "console";
 import fs from "fs";
 import readline from "readline";
 import AssemFileData from "../config/models/assemFileData.js";
-// const readline = require("readline");
+
+
+const readFileLocation = "./file.txt";  // Test file location
 
 async function readCreateData() {
-  const readFileLocation = "../../uploadedFiles/file.txt";
-  const writeFileLocation = "../../uploadedFiles/Answer.txt";
+//   const readFileLocation = "../uploadedFiles/test.txt "
+  const writeFileLocation = "../uploadedFiles/Answer.txt";
+ 
   const text = fs.createReadStream(readFileLocation, "utf-8");
 
   const rl = readline.createInterface({
@@ -21,7 +24,7 @@ async function readCreateData() {
     const resList = res.split("|");
     if (resList.length > 19) {
       // Column in file
-      fileSize = 0;
+      // let fileSize = 0;
       try {
         const lineProj = await AssemFileData.create({
           proj_no: resList[0].substring(),
@@ -55,7 +58,7 @@ async function readCreateData() {
         spider++;
         return lineProj;
       } catch (err) {
-        console.err(
+        console.log(
           "There was an error creating file data",
           JSON.stringify(err)
         );
@@ -66,8 +69,8 @@ async function readCreateData() {
 }
 readCreateData();
 
-const writeFileToDatabse = (data) => {
-  fs.appendFile(writeFileLocation, data, "utf-8", (err) => {
-    if (err) console.log(err);
-  });
-};
+// const writeFileToDatabse = (data) => {
+//   fs.appendFile(readFileLocation, data, "utf-8", (err) => {
+//     if (err) console.log(err);
+//   });
+// };
