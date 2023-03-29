@@ -4,11 +4,15 @@ import readline from "readline";
 import AssemFileData from "../config/models/assemFileData.js";
 
 
-const readFileLocation = "./file.txt";  // Test file location
+// const readFileLocation = "./file.txt";  // Test file location
+const readFileLocation = "../uploadedFiles/test.txt";  // Test file location
+// const text = fs.createReadStream(readFileLocation, "utf-8");
+// console.log('contents of text file:', text)
 
 async function readCreateData() {
-//   const readFileLocation = "../uploadedFiles/test.txt "
-  const writeFileLocation = "../uploadedFiles/Answer.txt";
+  // const readFileLocation = "../uploadedFiles/test.txt "
+  // console.log('readFileLocation:', readFileLocation)
+  // const writeFileLocation = "../uploadedFiles/Answer.txt";
  
   const text = fs.createReadStream(readFileLocation, "utf-8");
 
@@ -62,7 +66,7 @@ async function readCreateData() {
           "There was an error creating file data",
           JSON.stringify(err)
         );
-        return res.send(err);
+        // return res.send(err);
       }
     }
   });

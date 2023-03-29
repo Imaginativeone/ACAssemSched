@@ -13,7 +13,7 @@ AssemFile.init(
     filename: DataTypes.STRING,
     processed: DataTypes.BOOLEAN,
     owner: DataTypes.STRING,
-    created_at: { type: DataTypes.DATE, type: DataTypes.NOW },
+    created_at: { type: DataTypes.DATE},
   },
   { sequelize: assemdb, modelName: "AssemFile" }
 );
