@@ -79,14 +79,17 @@ const readProp = () => {
                 if (customizedItem.substring(4,8).includes('STPN')){ STPNColorCount++; /*console.log('STPN', STPNColorCount)*/}
                 if (customizedItem.substring(4,8).includes('STPN')){ TTWHColorCount++; /*console.log('TTWH', TTWHColorCount)*/}
 
+                counter++;
+                spider++;
 
                 // console.log(counter + " " + projNo + " " + customizedItem + " " + spider)
+
             
                 // if(counter === 0){
                 //     writeFileToDatabse(answer + os.EOL);
                 // }
-                counter++;
-                spider++;
+                
+                console.log(fs.createReadStream(projNo));
 
                 const secondLastPipe = res.lastIndexOf("|") - 10;
                 const projNo1 = `${res.substring(
