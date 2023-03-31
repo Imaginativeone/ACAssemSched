@@ -1,13 +1,17 @@
 const express = require("express");
 const router = express.Router();
 
-import { Sequelize } from "sequelize";
+import AssemFile from "../models/assemFile.js";
+import AssemFileData from "../config/assemFileData.js";
 import { sequelize } from "./database.js";
-const sequelize = new Sequelize('postgres::memory')
+
+const sequelize = new sequelize('postgres::memory')
+
 
 /* --------- CRUD Asemfiles ------- */
 router.get("/assemFiles", (req, res) => {
-  return sequelize.models.assemFile
+  // return sequelize.models.AssemFile
+  models.AssemFile
     .findAll()
     .then((files) => res.send(files))
     .catch((err) => {
@@ -27,11 +31,16 @@ router.get("/assemFiles:Id", (req, res) => {
   });
 
 router.post("/assemFiles", async (req, res) => {
-  const { fileName, id, owner, processed, createdAt } = req.body;
   try {
-    const data = await sequelize.models.assemFile
-      .create({ fileName, owner, processed, id, createdAt });
-    return res.send(data);
+    const file = await models.AssemFile.create({
+        id: req.body.Id,
+        id_file: req.params.Id,
+        fileName: req.body.fileName,
+        owner: req.body.owner, 
+        processed: req.body.procssed, 
+        createdAt: req.body.createdAt 
+      });
+    return res.send(file);
   } catch (err) {
     console.log(
       "***There was an error creating a the file in the database",

@@ -1,11 +1,18 @@
-import { count } from "console";
+import { count, timeStamp } from "console";
 import fs from "fs";
 import readline from "readline";
-import AssemFileData from "../config/models/assemFileData.js";
+import { DATE } from "sequelize";
+import AssemFileData from "../../config/assemFileData.js";
 
+import assemdb from "../database.js";
+import AssemFile from "../../models/assemFile.js";
+
+assemdb.sync(function (err) {
+  console.error("syncerror", err);
+});
 
 // const readFileLocation = "./file.txt";  // Test file location
-const readFileLocation = "../uploadedFiles/test.txt";  // Test file location
+const readFileLocation = "../uploadedFiles/test.txt"; // Test file location
 // const text = fs.createReadStream(readFileLocation, "utf-8");
 // console.log('contents of text file:', text)
 
@@ -13,7 +20,7 @@ async function readCreateData() {
   // const readFileLocation = "../uploadedFiles/test.txt "
   // console.log('readFileLocation:', readFileLocation)
   // const writeFileLocation = "../uploadedFiles/Answer.txt";
- 
+
   const text = fs.createReadStream(readFileLocation, "utf-8");
 
   const rl = readline.createInterface({
@@ -30,13 +37,13 @@ async function readCreateData() {
       // Column in file
       // let fileSize = 0;
       try {
-        const lineProj = await AssemFileData.create({
-          proj_no: resList[0].substring(),
+        await AssemFileData.create({
+          id: Date.UTC(),
+          proj_no: resList[0],
           customized_item: resList[1],
           upd_grp: resList[2],
           upd_seq: resList[3],
           plan_fin_dt: resList[4],
-          grille: "",
           sort1: resList[5],
           sort2: resList[6],
           sort3: resList[7],
@@ -52,21 +59,20 @@ async function readCreateData() {
           feat7: resList[17],
           lino: resList[18],
           prp_qty: resList[19],
+          grille: "",
           int_ext: "",
           grille_type: "",
         });
-        console.log(
-          `${counter} ${lineProj(proj_no)} ${lineProj(customizedItem)} ${lineProj(sort1)} ${spider}`
-        );
+        // console.log(
+        //   `${counter} ${lineProj(proj_no)} ${lineProj(customizedItem)} ${lineProj(sort1)} ${spider}`
+        // );
         counter++;
         spider++;
-        return lineProj;
       } catch (err) {
         console.log(
           "There was an error creating file data",
           JSON.stringify(err)
         );
-        // return res.send(err);
       }
     }
   });
