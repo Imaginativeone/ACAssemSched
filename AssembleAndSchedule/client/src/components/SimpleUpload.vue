@@ -1,5 +1,5 @@
 <template> 
-    <form @submit.prevent="uploadFile" enctype="multypart/form-data">
+    <form @submit.prevent="sendFile" enctype="multipart/form-data">
       <div v-if="message"
         :class="`message ${error ? 'is-danger' : 'is-sucess'}`"
         >
@@ -33,7 +33,7 @@
        </div>
 
        <div class="field">
-        <button class="button is-info" @click="sendFile">Upload File</button>
+        <button class="button is-info">Upload File</button>
        </div>
     
     </form>
@@ -94,11 +94,13 @@ export default {
         // await axios.post({file:file}, formData)
 
         // await axios.post('/uploadedFiles', formData);
-        await axios.post(uploadedFiles, formData)
+        const res = await axios.post('http://localhost:5001/uploadedFiles', formData)
         // console.log(JSON.stringify(formData));
-        this.message = "File has been uploaded";
+        this.message = "File has been uploaded!";
         this.file = "";
+        this.fileID = res.data.fileID
         this.error = false;
+        console.log("fileID: " + this.fileID)
       } catch (err){
         this.message = err.respsonse.data.error;
         this.error = true;
@@ -106,21 +108,7 @@ export default {
       console.log('The data', uploadedFiles);
     
     },
-    async uploadFile(){
-      const formData = new FormData();
-      formData.append('file', this.file);
-      try {
-        let result = await axios.post('/uploadedFiles', formData);
-        this.message = "File has been uploaded";
-        this.file = "";
-        this.error = false;
-        console.log(result);
-      } catch (err) {
-        this.message = err.respsonse.data.error;
-        this.error = true;
-      }
-      
-    },
+    
     async saveFile(){
         if(this.file){
           try{

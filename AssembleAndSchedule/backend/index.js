@@ -1,5 +1,6 @@
 import express from 'express';
 import multer from 'multer';
+import cors from 'cors'
 // import assemFile from "./src/models/assemFile.js";
 // import './src/routes.js';
 
@@ -35,52 +36,65 @@ import "dotenv/config";
 
 /* Middleware  */
 app.use(express.json());
+app.use(cors()) // need to configure before going production!!
 app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 
 
-app.use((req, res, next) => {
-    req.context = {
-      models,
-      // me: models.users[1],  // TODO: Look up the user
-    };
-    next();
-  });
+// app.use((req, res, next) => {
+//     req.context = {
+//       models,
+//       // me: models.users[1],  // TODO: Look up the user
+//     };
+//     next();
+//   });
 
-app.use(function(err, req, res, next){
-    if(err.code === "LIMIT_FILE_TYPES"){
-        res.status(422).json({ error: "Only CVS or Excel files allowed"});
-        return;
-    }
+// app.use(function(err, req, res, next){
+//     if(err.code === "LIMIT_FILE_TYPES"){
+//         res.status(422).json({ error: "Only CVS or Excel files allowed"});
+//         return;
+//     }
 
-    if(err.code === "LIMIT_FIL_ESIZE"){
-        res
-        .status(422)
-        .json({error: `Too large. Max sizeis ${MAX_SIZE / 1000}kb`})
-        return;
-    }
-});
+//     if(err.code === "LIMIT_FIL_ESIZE"){
+//         res
+//         .status(422)
+//         .json({error: `Too large. Max sizeis ${MAX_SIZE / 1000}kb`})
+//         return;
+//     }
+// });
 
 /* Routes */
 
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname,"index.html"))
-})
+// app.get('/*', (req, res) => {
+//     res.sendFile(path.join(__dirname,"index.html"))
+// })
 
 app.post('/uploadedFiles', upload.single('file'), (req, res) => {
+    if (!req.file) {
+        return res.json()
+    }
+
     //create new db entry with result as filename then return ID of file
-    console.log('file in the backend', JSON.stringify(req))
-    // setImmediate(parse_file)
-    res.json({file: req.file});
+    const fileID = req.file.filename
+    console.log('file input the backend', JSON.stringify(req.file))
+    res.json({message: "done", fileID})
 });
 
 app.get('/uploadedFiles', (req, res) => {
-    res.json({file: req.file[0]})
-    console.log("file", {file: req.file[0]})
+    // res.json({file: req.file[0]})
+    // console.log("file", {file: req.file[0]})
+    console.log("in GET")
+    res.json({files: []})
 });
 
+app.get('/cleanUp', (req, res) => {
+    console.log("got fileID to cleanup: " + req.query.fileID)
+    res.json({message: "ok"})
+})
 
 
 
-app.listen(3305, () => console.log("Running on localhoat:3305"));
+
+app.listen(5001, () => console.log("Running on localhost:5001"));
 
 export default app;

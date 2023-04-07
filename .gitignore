@@ -1,2 +1,4 @@
 node_modules/
 .env
+AssembleAndSchedule/backend/uploadedFiles
+AssembleAndSchedule/client/dist
