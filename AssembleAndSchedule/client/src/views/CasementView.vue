@@ -34,6 +34,12 @@
       />
 
  </div>
+
+ <div class="section">
+  <div class="container">
+    <FilesTable ></FilesTable>
+  </div>
+ </div>
   
   <!-- Upload file -->
   <div class="section">
@@ -69,10 +75,11 @@ import axios from 'axios'
 import ButtonComponent from '../components/ButtonComponent'
 import SimpleUpload from '../components/SimpleUpload.vue'
 import CleanUp from '../components/CleanUp.vue'
+import FilesTable from '../components/FilesTable.vue'
 // import Dropzone from '../components/DropZone.vue'
 
   export default {
-    components: { ButtonComponent, SimpleUpload,  CleanUp /* Dropzone */ },
+    components: { ButtonComponent, SimpleUpload,  FilesTable, CleanUp /* Dropzone */ },
     name: 'CasementView',
     props: {
       file: String
@@ -129,6 +136,9 @@ import CleanUp from '../components/CleanUp.vue'
         freshStart(){
           console.log('Reset the page')
         }, 
+        FilesTable() {
+
+        }
    }
 }
     
