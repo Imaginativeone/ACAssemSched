@@ -1,6 +1,7 @@
 import express from 'express';
 import multer from 'multer';
 import cors from 'cors'
+import Excel from 'exceljs'
 // import assemFile from "./src/models/assemFile.js";
 // import './src/routes.js';
 
@@ -87,12 +88,32 @@ app.get('/uploadedFiles', (req, res) => {
     res.json({files: []})
 });
 
-app.get('/cleanUp', (req, res) => {
+app.get('/cleanUp', async (req, res) => {
     console.log("got fileID to cleanup: " + req.query.fileID)
-    res.json({message: "ok"})
+
+    try {
+    await cleanUp(req.query.fileID)
+    res.json({status: "ok"})
+    } catch (ex) {
+        res.json({status: "error", message: ex.message})
+    }
 })
 
 
+
+async function cleanUp(fileID) { 
+    const csvOptions = {
+        parserOptions: {
+            delimiter: '|',
+            quote: false,
+          },
+    }
+
+    const workbook = new Excel.Workbook();
+    const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileID}`, csvOptions);
+    await workbook.xlsx.writeFile(`./uploadedFiles/${fileID}.xlsx`);
+
+}
 
 
 app.listen(5001, () => console.log("Running on localhost:5001"));
