@@ -31,7 +31,7 @@
       <br>
       <br>
 
-      <h1 class="banner">Select An Option To Continue </h1>
+      <!-- <h1 class="banner">Select An Option To Continue </h1> -->
 
  </div>
 
@@ -81,8 +81,8 @@ import FilesTable from '../components/FilesTable.vue'
 import SpreadSheet from '../components/SpreadSheet.vue'
 
   export default {
-    components: { ButtonComponent, SimpleUpload,  FilesTable, CleanUp, SpreadSheet /* Dropzone */ },
-    components: { ButtonComponent, SimpleUpload,  FilesTable, /*CleanUp /* Dropzone */ },
+    components: { ButtonComponent, SimpleUpload,  FilesTable,  SpreadSheet /* CleanUp, Dropzone */ },
+    // components: { ButtonComponent, SimpleUpload,  FilesTable, /*CleanUp /* Dropzone */ },
     name: 'CasementView',
     props: {
       file: String
