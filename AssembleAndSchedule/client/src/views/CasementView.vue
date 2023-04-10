@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 class="header">CASEMENT Scheduler</h1>
+    <h1 class="banner">Casement Scheduler</h1>
   </header>
     <div class="container">
       <ButtonComponent 
@@ -10,16 +10,10 @@
       />
 
       <ButtonComponent 
-        text=" Clean-UP" 
+        text=" Clean-Up plus BatchBin" 
         color="blue" 
-        @click="cleanUp()"
+        @click="cleanUp_bb()"
       /> 
-
-      <ButtonComponent
-        text=" Batch/Bin "
-        color="orange"
-        @click="batchBin()"
-      />
 
       <ButtonComponent 
         text=" Save Completed File" 
@@ -32,6 +26,12 @@
         color="blue"
         @click="reSort()"
       />
+
+      <br>
+      <br>
+      <br>
+
+      <h1 class="banner">Select An Option To Continue </h1>
 
  </div>
 
@@ -51,41 +51,35 @@
     
     </div>
       <div class="container">
-        
         <simple-upload />
     </div>
-
-    <input type="file"> {{ this.file }}
-    <textarea cols="30" rows="20" ></textarea>
-        
 
     <!-- <dropzone /> -->
 
   </div>
-  <div>
+  <!-- <div>
      <CleanUp />
-    </div>
+ </div> -->
 </template>
 
 <script>
-// import { OPEN } from 'ws';
 import axios from 'axios'
 // import { readFile } from 'fs'
 
 import ButtonComponent from '../components/ButtonComponent'
 import SimpleUpload from '../components/SimpleUpload.vue'
-import CleanUp from '../components/CleanUp.vue'
 import FilesTable from '../components/FilesTable.vue'
+// import CleanUp from '../components/CleanUp.vue'
 // import Dropzone from '../components/DropZone.vue'
 
   export default {
-    components: { ButtonComponent, SimpleUpload,  FilesTable, CleanUp /* Dropzone */ },
+    components: { ButtonComponent, SimpleUpload,  FilesTable, /*CleanUp /* Dropzone */ },
     name: 'CasementView',
     props: {
       file: String
     },
     methods: {
-      cleanUp(){
+      cleanUp_bb(){
         var fr = new FileReader();
         fr.onload=function(){
           fr.readAsText(this.file)
@@ -105,9 +99,7 @@ import FilesTable from '../components/FilesTable.vue'
         //     fr.readAsText(this.files[0]);
         // })
         },
-        batchBin(){
-          console.log('rules for batching');
-        },
+        
         saveCompletedFile(){
           const fileToSave = this.file;
           axios.put('./uploads', fileToSave)
@@ -145,7 +137,7 @@ import FilesTable from '../components/FilesTable.vue'
 </script>
 
 <style>
-div {
+/* div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,6 +146,18 @@ div {
 textarea {
   margin-top: 15px;
   width:50% ;
-}
+} */
 
+.banner {
+  display: inline-block;
+  color: aliceblue;
+  background: black;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: 15px;
+  font-size: 1rem;
+}
 </style>

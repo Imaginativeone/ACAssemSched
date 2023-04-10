@@ -14,13 +14,15 @@
 <script>
 import DataTable  from 'primevue/datatable';
 import Column from 'primevue/column'
+// import SimpleUpload from 'src/components/SimpleUpload.vue'
 
 export default {
     components: { DataTable, Column },
 
     data() {
         return {
-            products: null
+            products: null,
+            fileName: ""
         };
     },
     mounted() {
@@ -28,7 +30,7 @@ export default {
         this.products = [
             {
                 fileID: '111',
-                fileName: "june_orders",
+                fileName: "SimpleUpload.fileName",
                 dateAdded: new Date().toISOString(),
                 status: "Ready",
             }
