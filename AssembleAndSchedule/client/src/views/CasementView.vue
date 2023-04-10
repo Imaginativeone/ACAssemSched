@@ -40,6 +40,13 @@
     <FilesTable ></FilesTable>
   </div>
  </div>
+
+ <div class="section">
+  <div class="xcontainer">
+    <SpreadSheet ></SpreadSheet>
+  </div>
+ </div>
+ 
   
   <!-- Upload file -->
   <div class="section">
@@ -71,8 +78,10 @@ import SimpleUpload from '../components/SimpleUpload.vue'
 import FilesTable from '../components/FilesTable.vue'
 // import CleanUp from '../components/CleanUp.vue'
 // import Dropzone from '../components/DropZone.vue'
+import SpreadSheet from '../components/SpreadSheet.vue'
 
   export default {
+    components: { ButtonComponent, SimpleUpload,  FilesTable, CleanUp, SpreadSheet /* Dropzone */ },
     components: { ButtonComponent, SimpleUpload,  FilesTable, /*CleanUp /* Dropzone */ },
     name: 'CasementView',
     props: {
