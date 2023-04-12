@@ -68,37 +68,23 @@ export default {
         this.error = true;
         this.message =  tooLarge ? `Too large. Max size is ${MAX_SIZE/1000}kb`: " Only CVS or Excel files allowed";
       }
-
-      console.log('We are here in SelectFile Line 72')
-
       const formData = new FormData();
       formData.append('file', this.file);
       JSON.stringify(this.file);
-
     },
 
     async sendFile(){
       const formData = new FormData();
       formData.append('file', this.file);
-      JSON.stringify(formData);
-      // const file = ' ';
-      let uploadedFiles = []
-
       try {
-        // await axios.post('/uploadedFiles', formData);
-        const res = await axios.post('http://localhost:5001/uploadedFiles', formData)
-        // console.log(JSON.stringify(formData));
+        await axios.post('/uploadedFiles', formData)
         this.message = "File has been uploaded!";
         this.file = "";
-        this.fileID = res.data.fileID
         this.error = false;
-        console.log("fileID: " + this.fileID)
       } catch (err){
         this.message = err.respsonse.data.error;
         this.error = true;
-      }
-      console.log('The data', uploadedFiles);
-    
+      }    
     },
     
     async saveFile(){
@@ -115,6 +101,7 @@ export default {
         } 
     },
     showFileContents(){
+      // This function might not be useful since we're now using Handsontables
           let input = document.querySelector('input');
           let textArea = document.querySelector('textarea');
           

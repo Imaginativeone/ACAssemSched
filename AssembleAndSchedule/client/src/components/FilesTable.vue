@@ -32,7 +32,7 @@ export default {
     async mounted() {
         console.log("mounted")
         this.products = await this.getfile()
-        // console.log('File name and ID: ',this.fileID, this.fileName)
+        console.log('File name and ID: ', this.fileID, this.fileName)
     },
     methods: {
 
@@ -40,18 +40,18 @@ export default {
             const data = []
             // const file = this.$refs.file.files[0];
             try {
-                const res = await axios.get("http://localhost:5001/uploadedFiles/", data);
+                const res = await axios.get("/uploadedFiles", data);
+                console.log('data from axios.get', res)
 
                 if (!res.data || !res.data.length)
                     return []
                     
                 console.log('data from axios.get', res)
                 JSON.stringify(data)
-                this.fileName = res.data[0].name,
-                this.dateAdded = res.data[0].LastModifiedDate,
-                this.fileID = res.data[0].fileID
-                console.log('File name and ID: ', res.data.fileID, this.fileName, data)
-
+                this.fileName = res.data.name,
+                this.dateAdded = res.data.LastModifiedDate,
+                this.fileID = res.data.fileID
+                console.log('File name and ID: ', res.data.fileID, this.fileName, res, data)
                 return res.data
             } catch (err) {
                 console.error(err)
