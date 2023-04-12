@@ -42,7 +42,6 @@
 <script>
 
 import axios from 'axios'
-// import useReadXLSX from '../composables/useReadXLSX'
 
 export default {
   name: "SimpleUpload",
@@ -76,11 +75,6 @@ export default {
       formData.append('file', this.file);
       JSON.stringify(this.file);
 
-      // Read file contents  ---> this DOES NOT WORK
-      const fileContents = new FileReader();
-      let fileContent = fileContents.readAsText(this.file);
-      console.log('This time? ---> line 82', fileContent, this.file)
-
     },
 
     async sendFile(){
@@ -91,8 +85,6 @@ export default {
       let uploadedFiles = []
 
       try {
-        // await axios.post({file:file}, formData)
-
         // await axios.post('/uploadedFiles', formData);
         const res = await axios.post('http://localhost:5001/uploadedFiles', formData)
         // console.log(JSON.stringify(formData));
