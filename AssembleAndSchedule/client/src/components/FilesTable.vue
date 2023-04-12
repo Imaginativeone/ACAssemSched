@@ -41,6 +41,10 @@ export default {
             // const file = this.$refs.file.files[0];
             try {
                 const res = await axios.get("http://localhost:5001/uploadedFiles/", data);
+
+                if (!res.data || !res.data.length)
+                    return []
+                    
                 console.log('data from axios.get', res)
                 JSON.stringify(data)
                 this.fileName = res.data[0].name,
