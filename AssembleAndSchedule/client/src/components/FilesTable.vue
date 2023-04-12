@@ -29,19 +29,9 @@ export default {
             log: ''
         };
     },
-    mounted() {
+    async mounted() {
         console.log("mounted")
-        this.products = [
-            {
-                fileID: "fileID",
-                fileName: this.fileName,
-                dateAdded: new Date().toISOString(),
-                // dateAdded: this.getfile.dateAdded,
-                status: "Ready",
-                newFile: this.getfile(),
-                log: console.log(this.newFile)
-            }
-        ]
+        this.products = await this.getfile()
         // console.log('File name and ID: ',this.fileID, this.fileName)
     },
     methods: {
@@ -50,13 +40,15 @@ export default {
             const data = []
             // const file = this.$refs.file.files[0];
             try {
-                const res = await axios.get("https://localhost:5001/uploadedFiles/", data);
+                const res = await axios.get("http://localhost:5001/uploadedFiles/", data);
                 console.log('data from axios.get', res)
                 JSON.stringify(data)
                 this.fileName = res.data[0].name,
                 this.dateAdded = res.data[0].LastModifiedDate,
                 this.fileID = res.data[0].fileID
                 console.log('File name and ID: ', res.data.fileID, this.fileName, data)
+
+                return res.data
             } catch (err) {
                 console.error(err)
             }
