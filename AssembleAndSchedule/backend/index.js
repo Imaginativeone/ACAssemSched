@@ -2,6 +2,10 @@ import express from 'express';
 import multer from 'multer';
 import cors from 'cors'
 import Excel from 'exceljs'
+import {readdir, readFile} from 'fs/promises';
+
+import * as fs from "fs";
+
 // import assemFile from "./src/models/assemFile.js";
 // import './src/routes.js';
 
@@ -77,16 +81,61 @@ app.post('/uploadedFiles', upload.single('file'), (req, res) => {
 
     //create new db entry with result as filename then return ID of file
     const fileID = req.file.filename
-    console.log('file input the backend', JSON.stringify(req.file))
-    res.json({message: "done", fileID})
+    const fileName = req.file.originalname
+    console.log('file input to backend', JSON.stringify(req.file))
+    res.json({message: "done", fileID, fileName, })
 });
 
+// app.get('./uploadedFiles', (req, res) => { 
+//     async function readFilesFromDir() {
+//         const filesDir =  './uploadedFiles'
+//         const files = await readdir(filesDir);
+
+//         // check for files
+//         console.log('Contents of files', files);
+
+//         const filesContent = await Promise.all(files.map((file) => {
+//           return readFile(filesDir + '/' + file, 'utf8');
+//         }));
+
+//         const arr = filesContent.reduce((acc, data) => {
+//           acc.push(data.toString().split('\n'))
+//           return acc;
+//         }, [])
+      
+//         return new Set(arr);
+//       }
+      
+//       readFilesFromDir().then((values) => {
+//         console.log(values);
+//       })
+// })
+
 app.get('/uploadedFiles', (req, res) => {
-    // res.json({file: req.file[0]})
-    // console.log("file", {file: req.file[0]})
+    const filedir = './uploadedFiles'
+    const files = fs.readdirSync(filedir);
+    const filesContent = fs.lstatSync(filedir)
+    // console.log(files, filesContent)
+    // const fileName = req
+
     console.log("in GET")
-    res.json({files: []})
+    res.json({message: "done", files, filesContent})    
 });
+
+// app.get('uploadedFiles', (req, res) => {
+//     const filedir = './uploadedFiles'
+//     const isFile = fileName => {
+//         return fs.lstatSync(fileName).isFile();
+//       };
+      
+//       fs.readdirSync(filedir)
+//         .map(fileName => {
+//             console.log(fileName);
+//           return path.join(filedir, fileName);
+//         })
+//         .filter(isFile);
+//     res.json(fileName)      
+// })
 
 app.get('/cleanUp', async (req, res) => {
     console.log("got fileID to cleanup: " + req.query.fileID)

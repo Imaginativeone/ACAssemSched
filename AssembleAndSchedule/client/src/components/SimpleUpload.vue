@@ -45,6 +45,8 @@ import axios from 'axios'
 
 export default {
   name: "SimpleUpload",
+  
+  props: [],
 
   data(){
     return{
