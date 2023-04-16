@@ -119,7 +119,7 @@ app.get('/uploadedFiles', (req, res) => {
     // const fileName = req
 
     console.log("in GET")
-    res.json({message: "done", files, filesContent})    
+    res.json({message: "done", files: files.map(f => ({fileID: f, fileName: f})), filesContent})    
 });
 
 // app.get('uploadedFiles', (req, res) => {

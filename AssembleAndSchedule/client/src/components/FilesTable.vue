@@ -2,11 +2,11 @@
 
 <template>
     <div class="card">
-    <DataTable :value="products" showGridlines stripedRows tableStyle="min-width: 50rem">
-        <Column field="fileID" :value="fileName " header="File ID"></Column>
-        <Column field={{ SimpleUpload- }} header="File Name"></Column>
-        <Column field= "dateAdded" header="Date Added"></Column>
-        <Column field="status" header="Status"></Column>
+    <DataTable :value="files" showGridlines stripedRows tableStyle="min-width: 50rem">
+        <Column field="fileID" header="File ID"></Column>
+        <Column field="fileID" header="File Name"></Column>
+        <!-- <Column field= "dateAdded" header="Date Added"></Column> -->
+        <!-- <Column field="status" header="Status"></Column> -->
     </DataTable>
 </div>
 </template>
@@ -16,46 +16,35 @@ import DataTable  from 'primevue/datatable';
 import Column from 'primevue/column'
 import axios from 'axios';
 
-// import SimpleUpload from '../components/SimpleUpload.vue'
-
 export default {
     components: { DataTable, Column },
 
     data() {
         return {
-            products: null,
-            fileName: '',
-            files: '',
-            log: ''
-        };
+            files: null
+        }
     },
     async mounted() {
         console.log("mounted")
-        this.products = await this.getfile()
-        // this.files = this.findFile()
-        console.log('File name and ID: ', this.fileID, this.fileName)
+
+        // expecting to get the below json array structure from the backend:
+        // this.files = [{fileID: '1111', fileName: 'filename'}]
+        this.files = await this.getfiles()
     },
+
     methods: {
 
-        async getfile (){  
-            // const data = ''
-            // const res = []
-            // const file = this.$refs.file.files[0];
+        async getfiles() {  
             try {
                 const res = await axios.get("http://localhost:5001/uploadedFiles");
-                this.files = res
-                console.log('1st data from axios.get:', res)
+                console.log('1st data from axios.get:', res.data)
 
-                if (!res || !res.length)
-                    return console.log("RES HAS No Data HERE YET")
+                if (!res || !res.data || !res.data.files) {
+                    console.log("RES HAS No Data HERE YET")
+                    return null
+                }
                     
-                console.log('data from axios.get', res)
-                // JSON.stringify(res)
-                this.fileName = res.name,
-                this.dateAdded = res.LastModifiedDate,
-                this.fileID = res.fileID
-                console.log('File name and ID: ', res.fileID, this.fileName, res)
-                return res
+                return  res.data.files
             } catch (err) {
                 console.error(err)
             }
