@@ -74,7 +74,7 @@ app.use(express.urlencoded({ extended: true }));
 //     res.sendFile(path.join(__dirname,"index.html"))
 // })
 
-app.post('/uploadedFiles', upload.single('file'), (req, res) => {
+app.post('/uploadedFiles', upload.single('file'), async (req, res) => {
     if (!req.file) {
         return res.json()
     }
@@ -83,6 +83,8 @@ app.post('/uploadedFiles', upload.single('file'), (req, res) => {
     const fileID = req.file.filename
     const fileName = req.file.originalname
     console.log('file input to backend', JSON.stringify(req.file))
+    fs.renameSync(`./uploadedFiles/${fileID}`, `./uploadedFiles/${fileID}_${fileName}`)
+    await cleanUp(`${fileID}_${fileName}`)
     res.json({message: "done", fileID, fileName, })
 });
 
@@ -119,7 +121,11 @@ app.get('/uploadedFiles', (req, res) => {
     // const fileName = req
 
     console.log("in GET")
-    res.json({message: "done", files: files.map(f => ({fileID: f, fileName: f})), filesContent})    
+    res.json({message: "done", 
+        files: files.filter(f => f.match(/.xlsx$/)).map(f => ({
+            fileID: f.substring(0, f.indexOf('_')), 
+            fileName: f.substring(f.indexOf('_')+1)
+    })), filesContent})    
 });
 
 // app.get('uploadedFiles', (req, res) => {
@@ -141,16 +147,38 @@ app.get('/cleanUp', async (req, res) => {
     console.log("got fileID to cleanup: " + req.query.fileID)
 
     try {
-    await cleanUp(req.query.fileID)
-    res.json({status: "ok"})
+        await cleanUp(req.query.fileID)
+        res.json({status: "ok"})
     } catch (ex) {
         res.json({status: "error", message: ex.message})
     }
 })
 
+// GET /fileContent/:filename
+app.get('/fileContent', async (req, res) => {
+    console.log("fileContent filename: " + req.query.filename)
+    const workbook = new Excel.Workbook();
+    await workbook.xlsx.readFile('./uploadedFiles/' + req.query.filename);
+    // console.log("file content json: ", JSON.stringify(workbook.model))
+
+    const worksheet = workbook.worksheets[0]
+
+    console.log("xxxx => " + JSON.stringify(worksheet.model))
+
+    const content = []
+    // Iterate over all rows (including empty rows) in a worksheet
+    worksheet.eachRow({ includeEmpty: true }, function(row, rowNumber) {
+        // console.log('Row ' + rowNumber + ' = ' + JSON.stringify(row.values))
+        content.push(row.values)
+    })
+
+    // console.log("entire content: " + JSON.stringify(content))
+  
+})
 
 
-async function cleanUp(fileID) { 
+
+async function cleanUp(fileName) { 
     const csvOptions = {
         parserOptions: {
             delimiter: '|',
@@ -158,9 +186,11 @@ async function cleanUp(fileID) {
           },
     }
 
+    const newFileName = fileName.replace(/.csv$/, '').replace(/.txt$/, '')
+
     const workbook = new Excel.Workbook();
-    const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileID}`, csvOptions);
-    await workbook.xlsx.writeFile(`./uploadedFiles/${fileID}.xlsx`);
+    const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`, csvOptions);
+    await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`);
 
 }
 

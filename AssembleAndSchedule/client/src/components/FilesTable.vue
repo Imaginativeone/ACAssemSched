@@ -2,9 +2,10 @@
 
 <template>
     <div class="card">
-    <DataTable :value="files" showGridlines stripedRows tableStyle="min-width: 50rem">
-        <Column field="fileID" header="File ID"></Column>
-        <Column field="fileID" header="File Name"></Column>
+    <DataTable :value="files" selectionMode="single" v-model:selection="selectedFile"
+            @rowSelect="onRowSelect" dataKey="fileID"
+            showGridlines stripedRows tableStyle="min-width: 50rem">
+        <Column field="fileName" header="File Name"></Column>
         <!-- <Column field= "dateAdded" header="Date Added"></Column> -->
         <!-- <Column field="status" header="Status"></Column> -->
     </DataTable>
@@ -21,7 +22,8 @@ export default {
 
     data() {
         return {
-            files: null
+            files: null,
+            selectedFile: null,
         }
     },
     async mounted() {
@@ -53,7 +55,13 @@ export default {
           //  const listOfFiles= '' This function is just for comparison and troubleshooting
           const files = fetch("/uploadedFiles").then(response => {return response.json(); })
           console.log(files);
+        },
+
+        async onRowSelect() {
+            console.log("selected file: ", this.selectedFile)
+            await axios.get("http://localhost:5001/fileContent?filename=" +  this.selectedFile.fileID + '_' + this.selectedFile.fileName);
         }
+        
     }
     
 }
