@@ -159,11 +159,8 @@ app.get('/fileContent', async (req, res) => {
     console.log("fileContent filename: " + req.query.filename)
     const workbook = new Excel.Workbook();
     await workbook.xlsx.readFile('./uploadedFiles/' + req.query.filename);
-    // console.log("file content json: ", JSON.stringify(workbook.model))
 
     const worksheet = workbook.worksheets[0]
-
-    console.log("xxxx => " + JSON.stringify(worksheet.model))
 
     const content = []
     // Iterate over all rows (including empty rows) in a worksheet
@@ -172,8 +169,8 @@ app.get('/fileContent', async (req, res) => {
         content.push(row.values)
     })
 
-    // console.log("entire content: " + JSON.stringify(content))
-  
+
+    res.json(content) 
 })
 
 

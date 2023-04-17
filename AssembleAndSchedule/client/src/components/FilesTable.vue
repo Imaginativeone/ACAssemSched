@@ -59,7 +59,7 @@ export default {
 
         async onRowSelect() {
             console.log("selected file: ", this.selectedFile)
-            await axios.get("http://localhost:5001/fileContent?filename=" +  this.selectedFile.fileID + '_' + this.selectedFile.fileName);
+            this.$emit('loadSpreadSheet', this.selectedFile.fileID + '_' + this.selectedFile.fileName)
         }
         
     }

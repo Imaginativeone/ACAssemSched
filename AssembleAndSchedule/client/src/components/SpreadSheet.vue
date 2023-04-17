@@ -1,6 +1,10 @@
 <template>
   <div class="table">
-    <hot-table :data="data" :rowHeaders="true" :colHeaders="true" licenseKey="non-commercial-and-evaluation"></hot-table>
+    <hot-table 
+      ref="hotTableComponent"
+      :data="data" :rowHeaders="true" :colHeaders="true" 
+      licenseKey="non-commercial-and-evaluation">
+    </hot-table>
   </div>
 </template>
   
@@ -9,6 +13,7 @@
     import { HotTable } from '@handsontable/vue3';
     import { registerAllModules } from 'handsontable/registry';
     import 'handsontable/dist/handsontable.full.css';
+    import axios from 'axios';
   
     // register Handsontable's modules
     registerAllModules();
@@ -28,6 +33,12 @@
 
           ],
         };
+      },
+      methods: {
+        async loadSS(fileName) {
+          const res = await axios.get("http://localhost:5001/fileContent?filename=" +  fileName);
+          this.$refs.hotTableComponent.hotInstance.loadData(res.data);
+        }
       },
       components: {
         HotTable,

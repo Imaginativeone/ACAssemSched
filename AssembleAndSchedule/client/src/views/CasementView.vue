@@ -37,13 +37,13 @@
 
  <div class="section">
   <div class="container">
-    <FilesTable ></FilesTable>
+    <FilesTable @loadSpreadSheet="loadSS"></FilesTable>
   </div>
  </div>
 
  <div class="section">
   <div class="xcontainer">
-    <SpreadSheet ></SpreadSheet>
+    <SpreadSheet ref="SS"></SpreadSheet>
   </div>
  </div>
  
@@ -138,6 +138,9 @@ import SpreadSheet from '../components/SpreadSheet.vue'
         }, 
         FilesTable() {
 
+        },
+        loadSS(fileName) {
+          this.$refs.SS.loadSS(fileName)
         }
    }
 }
