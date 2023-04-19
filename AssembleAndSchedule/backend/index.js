@@ -230,7 +230,7 @@ app.get('/fileContent', async (req, res) => {
 async function cleanUp(fileName) { 
     const csvOptions = {
         parserOptions: {
-            delimiter: '|' > 19,
+            delimiter: '|',
             quote: false,
           },
     }
@@ -240,22 +240,28 @@ async function cleanUp(fileName) {
 
     const workbook = new Excel.Workbook();
     const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`, csvOptions);
-
-    // Find empty rows and remove
-    // const row = worksheet.getCell().row(Object.entries(" "))
-    // const col = worksheet.getCell().col(Object.entries(" "))
-    // if(worksheet.model[row,col] == " "){
-    //     worksheet.spliceRows(row)  
-    // }
-
+   
     /* Crude way of deleting rows */
-    worksheet.spliceRows(1, 4)
+    const workSheetLength = worksheet.rowCount
+
+    
+    const rows = worksheet.getRows(1, workSheetLength )
+    rows.forEach(row => {
+        row.getCell(1).value()? value : row.splice()
+    })
+
+    // const emptyRow = worksheet.getRow().getCell(1).value(" ")
+    // worksheet.spliceRows(emptyRow)
+    // worksheet.spliceRows(1, 4)
     // worksheet.spliceRows(62, 69)
     // worksheet.spliceRows(128, 135)
     // worksheet.spliceRows(194, 201)
-    worksheet.spliceRows(184, 191)
+    // worksheet.spliceRows(184, 191)
    
     // const content = []
+
+    // Iterate over all cells in a row (including empty cells)
+    
     // // Iterate over all rows (including empty rows) in a worksheet
     worksheet.eachRow({ includeEmpty: true }, function(row, rowNumber) {
         if(row.values  == " "){
