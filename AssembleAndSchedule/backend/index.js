@@ -3,13 +3,13 @@ import multer from 'multer';
 import cors from 'cors'
 import Excel from 'exceljs'
 import {readdir, readFile} from 'fs/promises';
-
+import Papa from 'papaparse'
 import * as fs from "fs";
 
 // import assemFile from "./src/models/assemFile.js";
 // import './src/routes.js';
 
-
+// const Papa = require("papaparse");
 const app = express();
 import bodyParser from 'body-parser';
 
@@ -46,34 +46,6 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-// app.use((req, res, next) => {
-//     req.context = {
-//       models,
-//       // me: models.users[1],  // TODO: Look up the user
-//     };
-//     next();
-//   });
-
-// app.use(function(err, req, res, next){
-//     if(err.code === "LIMIT_FILE_TYPES"){
-//         res.status(422).json({ error: "Only CVS or Excel files allowed"});
-//         return;
-//     }
-
-//     if(err.code === "LIMIT_FILE_SIZE"){
-//         res
-//         .status(422)
-//         .json({error: `Too large. Max sizeis ${MAX_SIZE / 1000}kb`})
-//         return;
-//     }
-// });
-
-/* Routes */
-
-// app.get('/*', (req, res) => {
-//     res.sendFile(path.join(__dirname,"index.html"))
-// })
-
 app.post('/uploadedFiles', upload.single('file'), async (req, res) => {
     if (!req.file) {
         return res.json()
@@ -88,30 +60,6 @@ app.post('/uploadedFiles', upload.single('file'), async (req, res) => {
     res.json({message: "done", fileID, fileName, })
 });
 
-// app.get('./uploadedFiles', (req, res) => { 
-//     async function readFilesFromDir() {
-//         const filesDir =  './uploadedFiles'
-//         const files = await readdir(filesDir);
-
-//         // check for files
-//         console.log('Contents of files', files);
-
-//         const filesContent = await Promise.all(files.map((file) => {
-//           return readFile(filesDir + '/' + file, 'utf8');
-//         }));
-
-//         const arr = filesContent.reduce((acc, data) => {
-//           acc.push(data.toString().split('\n'))
-//           return acc;
-//         }, [])
-      
-//         return new Set(arr);
-//       }
-      
-//       readFilesFromDir().then((values) => {
-//         console.log(values);
-//       })
-// })
 
 app.get('/uploadedFiles', (req, res) => {
     const filedir = './uploadedFiles'
@@ -126,21 +74,6 @@ app.get('/uploadedFiles', (req, res) => {
             fileName: f.substring(f.indexOf('_')+1)
     })), filesContent})    
 });
-
-// app.get('uploadedFiles', (req, res) => {
-//     const filedir = './uploadedFiles'
-//     const isFile = fileName => {
-//         return fs.lstatSync(fileName).isFile();
-//       };
-      
-//       fs.readdirSync(filedir)
-//         .map(fileName => {
-//             console.log(fileName);
-//           return path.join(filedir, fileName);
-//         })
-//         .filter(isFile);
-//     res.json(fileName)      
-// })
 
 app.get('/cleanUp', async (req, res) => {
     console.log("got fileID to cleanup: " + req.query.fileID)
@@ -191,43 +124,51 @@ app.get('/fileContent', async (req, res) => {
 
 // }
 
+async function cleanUp(fileName) {
+    // Read the file
+    const newFileName = fileName.replace(/.csv$/, '').replace(/.txt$/, '')
+    const fileContent = fs.readFileSync(`./uploadedFiles/${fileName}`, "utf8");
 
-/* VBA Code
-'Sub DeleteRowWithContents()
+    // Parse the pipe-delimited .txt file
+    const parsedData = Papa.parse(fileContent, {
+        delimiter: "|",
+        header: true,
+    });
 
-    With ActiveSheet
-    .AutoFilterMode = False
-    With Range("A1", Range("A" & Rows.Count).End(xlUp))
-        .AutoFilter 1, "*Date*"
-        On Error Resume Next
-        .Offset(1).SpecialCells(12).EntireRow.Delete
-    End With
-    .AutoFilterMode = False
-    End With
+    // Create a new Excel workbook
+    const workbook = new Excel.Workbook();
+    const worksheet = workbook.addWorksheet("Sheet1");
 
-    With ActiveSheet
-    .AutoFilterMode = False
-    With Range("A1", Range("A" & Rows.Count).End(xlUp))
-        .AutoFilter 1, "*---*"
-        On Error Resume Next
-        .Offset(1).SpecialCells(12).EntireRow.Delete
-    End With
-    .AutoFilterMode = False
-    End With
+    // Write the header row
+    const headers = parsedData.meta.fields;
+    headers.forEach((header, index) => {
+        worksheet.getColumn(index + 1).key = header;
+        worksheet.getCell(1, index + 1).value = header;
+    });
 
-    With ActiveSheet
-    .AutoFilterMode = False
-    With Range("A1", Range("A" & Rows.Count).End(xlUp))
-        .AutoFilter 1, "*Renewal*"
-        On Error Resume Next
-        .Offset(1).SpecialCells(12).EntireRow.Delete
-        End With
-    .AutoFilterMode = False
-    End With
 
-    'End Sub
-*/
-async function cleanUp(fileName) { 
+    // Write the data rows
+    parsedData.data.forEach((row, rowIndex) => {
+        // Check the value of the first column using the first header name
+        if (!["Date ", "Renewal", "----", " "].includes(row[headers[0]])) {
+            headers.forEach((header, colIndex) => {
+                const cellValue = row[header];
+                worksheet.getCell(rowIndex + 2, colIndex + 1).value = cellValue;
+            });
+        } else {
+            console.log(" ---> removed", row);
+        }
+    });
+
+
+    // Save the workbook
+    await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`);
+
+    return workbook;
+}
+
+
+async function cleanUpOne(fileName) { 
     // const csvOptions = {
     //     parserOptions: {
     //         delimiter: '|',
@@ -243,11 +184,11 @@ async function cleanUp(fileName) {
         delimiter: "|",
         header: true,
     });
-
+    
      // Write the data rows
     parsedData.data.forEach((row, rowIndex) => {
         headers.forEach((header, colIndex) => {
-        worksheet.getCell(rowIndex + 2, colIndex + 1).value = row[header];
+            worksheet.getCell(rowIndex + 2, colIndex + 1).value = row[header];
         });
     });
     
@@ -279,7 +220,43 @@ async function cleanUp(fileName) {
         
     
     /* Below is the VBA code from the macro. It needs to be converted to node  */
-       
+    
+    /* VBA Code
+    'Sub DeleteRowWithContents()
+    
+        With ActiveSheet
+        .AutoFilterMode = False
+        With Range("A1", Range("A" & Rows.Count).End(xlUp))
+            .AutoFilter 1, "*Date*"
+            On Error Resume Next
+            .Offset(1).SpecialCells(12).EntireRow.Delete
+        End With
+        .AutoFilterMode = False
+        End With
+    
+        With ActiveSheet
+        .AutoFilterMode = False
+        With Range("A1", Range("A" & Rows.Count).End(xlUp))
+            .AutoFilter 1, "*---*"
+            On Error Resume Next
+            .Offset(1).SpecialCells(12).EntireRow.Delete
+        End With
+        .AutoFilterMode = False
+        End With
+    
+        With ActiveSheet
+        .AutoFilterMode = False
+        With Range("A1", Range("A" & Rows.Count).End(xlUp))
+            .AutoFilter 1, "*Renewal*"
+            On Error Resume Next
+            .Offset(1).SpecialCells(12).EntireRow.Delete
+            End With
+        .AutoFilterMode = False
+        End With
+    
+        'End Sub
+    */
+    
     /* Duplicate  */
     // 'Sub duplicate1()
     // 'Range("a1").Resize(d.Count) = Application.Transpose(d.keys)
@@ -287,7 +264,7 @@ async function cleanUp(fileName) {
     // Range("A:A").Sort _
     // Key1:=Range("A1"), Order1:=xlAscending
     // 'End Sub
-
+    
     /* Sort Ascending */
     
     // 'Sub SortUp() 'Excel VBA for a sort (ascending).
