@@ -228,49 +228,58 @@ app.get('/fileContent', async (req, res) => {
     'End Sub
 */
 async function cleanUp(fileName) { 
-    const csvOptions = {
-        parserOptions: {
-            delimiter: '|',
-            quote: false,
-          },
-    }
+    // const csvOptions = {
+    //     parserOptions: {
+    //         delimiter: '|',
+    //         quote: false,
+    //       },
+    // }
     
 
     const newFileName = fileName.replace(/.csv$/, '').replace(/.txt$/, '')
 
+    // Parse the pipe-delimited .txt file
+    const parsedData = Papa.parse(fileContent, {
+        delimiter: "|",
+        header: true,
+    });
+
+     // Write the data rows
+    parsedData.data.forEach((row, rowIndex) => {
+        headers.forEach((header, colIndex) => {
+        worksheet.getCell(rowIndex + 2, colIndex + 1).value = row[header];
+        });
+    });
+    
     const workbook = new Excel.Workbook();
-    const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`, csvOptions);
-   
+    // const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`, csvOptions);
+    const worksheet = await workbook.readFile(`${parsedData}/${fileName}`);
+    
+    
+    
     /* Crude way of deleting rows */
     const workSheetLength = worksheet.rowCount
-
     
-    const rows = worksheet.getRows(1, workSheetLength )
-    rows.forEach(row => {
-        row.getCell(1).value()? value : row.splice()
-    })
-
-    // const emptyRow = worksheet.getRow().getCell(1).value(" ")
-    // worksheet.spliceRows(emptyRow)
-    // worksheet.spliceRows(1, 4)
-    // worksheet.spliceRows(62, 69)
-    // worksheet.spliceRows(128, 135)
-    // worksheet.spliceRows(194, 201)
-    // worksheet.spliceRows(184, 191)
-   
-    // const content = []
-
-    // Iterate over all cells in a row (including empty cells)
+    // const rows = worksheet.getRows(1, workSheetLength )
+    // rows.forEach(row => {
+        //     const cell = row.getCell('A1')
+        //     cell.value == String ? cell.value == null: row.splice()
+    // }) 
+  
     
-    // // Iterate over all rows (including empty rows) in a worksheet
+    // Iterate over all rows (including empty rows) in a worksheet, find empty row and delete
     worksheet.eachRow({ includeEmpty: true }, function(row, rowNumber) {
-        if(row.values  == " "){
-             worksheet.spliceRows() // this is not working to find the empty rows.
-        }
-    //     // console.log('Row ' + rowNumber + ' = ' + JSON.stringify(row.values))
-    //     content.push(row.values)
+        row.eachCell(function(cell, colNumber){
+            if (cell.value == "Date " || cell.value == 'Renewal' || cell.value == '----' || cell.value == " ") row.splice()
+            console.log(" ---> removed", cell.value)
+        })
     })
    
+    await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`);
+        
+    
+    /* Below is the VBA code from the macro. It needs to be converted to node  */
+       
     /* Duplicate  */
     // 'Sub duplicate1()
     // 'Range("a1").Resize(d.Count) = Application.Transpose(d.keys)
@@ -750,11 +759,6 @@ async function cleanUp(fileName) {
 
 
 // End Sub
-
-
-
-
-    await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`);
 
 }
 

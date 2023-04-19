@@ -6,6 +6,8 @@ import AssemFileData from "../../config/assemFileData.js";
 
 import assemdb from "../database.js";
 import AssemFile from "../../models/assemFile.js";
+import { writeFileAsync } from "xlsx";
+import { fileURLToPath } from "url";
 
 assemdb.sync(function (err) {
   console.error("syncerror", err);
@@ -36,6 +38,7 @@ async function readCreateData() {
     if (resList.length > 19) {
       // Column in file
       // let fileSize = 0;
+      writeFileAsync({text: fileURLToPath})
       try {
         await AssemFileData.create({
           id: Date.UTC(),
