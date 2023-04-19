@@ -51,12 +51,7 @@ export default {
                 console.error(err)
             }
         },
-        findFile(){
-          //  const listOfFiles= '' This function is just for comparison and troubleshooting
-          const files = fetch("/uploadedFiles").then(response => {return response.json(); })
-          console.log(files);
-        },
-
+       
         async onRowSelect() {
             console.log("selected file: ", this.selectedFile)
             this.$emit('loadSpreadSheet', this.selectedFile.fileID + '_' + this.selectedFile.fileName)

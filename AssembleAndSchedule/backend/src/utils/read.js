@@ -12,7 +12,7 @@ assemdb.sync(function (err) {
 });
 
 // const readFileLocation = "./file.txt";  // Test file location
-const readFileLocation = "../uploadedFiles/test.txt"; // Test file location
+const readFileLocation = "../uploadedFiles/testDatafile.txt"; // Test file location
 // const text = fs.createReadStream(readFileLocation, "utf-8");
 // console.log('contents of text file:', text)
 

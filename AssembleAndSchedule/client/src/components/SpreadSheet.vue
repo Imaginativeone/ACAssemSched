@@ -48,7 +48,7 @@
 
   <style>
   .table {
-    padding-left: 50px;
+    padding-left: 100px;
   }
 
 </style>

@@ -50,13 +50,6 @@
   
   <!-- Upload file -->
   <div class="section">
-    
-    <div> 
-
-    <!-- <CleanUp /> -->
-    <!-- <input type="file" id="dealCsv" /> -->
-    
-    </div>
       <div class="container">
         <simple-upload />
     </div>

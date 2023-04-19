@@ -100,11 +100,25 @@ class ParseFile {
                     // console.log(customizeOne,  'CS', CSCount, 'CT', CTCount, 'CD',CDCount, 'AN', ANCount,'FW', FWCount, 'WHCV', WHCVColorCount, 'WHWH', WHWHColorCount, 'BKWH \n', BKWHColorCount, 'WHPN', WHPNColorCount, 'WHOK', WHOKColorCount, 'STWH', STWHColorCount, 'STOK \n', STOKColorCount, 'STPN', STPNColorCount,'TTWH', TTWHColorCount)
                     return (customizeOne, CSCount, CTCount, CDCount, ANCount, FWCount, WHCVColorCount, WHWHColorCount, BKWHColorCount, WHPNColorCount, WHOKColorCount, STWHColorCount, STOKColorCount, STPNColorCount, TTWHColorCount);
                 }
+              
             });
+        }
+        
+        function translateXLSX2JSON() {
+            var xlsx = require("xlsx")
+            var dataPathExcel = "../../uploadedFiles/7272e2862a775923a9d690d84fde39bc_CS010623a.xlsx"
+            var wb = xlsx.readFile(dataPathExcel)
+            var sheetName = wb.SheetNames[0]
+            var sheetValue = wb.Sheets[sheetName]
+            console.log(sheetValue)
+            var excelData = xlsx.utils.sheet_to_json(sheetValue)
+            console.log(excelData)
         }
     }
 
 }
+
+
 readProp();
 
 // function parseFile(){
