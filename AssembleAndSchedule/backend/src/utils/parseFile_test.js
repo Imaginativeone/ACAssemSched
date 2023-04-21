@@ -41,6 +41,7 @@ class ParseFile {
                 const projList = resList.length > 19 ? resList.split("\r\n") : res.split("|");
                 console.log('Project list from first function', projList);
                 if (resList.length > 19) {
+                    projects.push(projList)
                     console.log(counter + "  " + res + " " + spider); // to help see line numbers inorder to locate data indexes
                     const projNo = resList[0].lastIndexOf('|');
                     const customizedItem = resList[1];
@@ -98,7 +99,7 @@ class ParseFile {
 
                     // console.log('ResList first function', resList);
                     // console.log(customizeOne,  'CS', CSCount, 'CT', CTCount, 'CD',CDCount, 'AN', ANCount,'FW', FWCount, 'WHCV', WHCVColorCount, 'WHWH', WHWHColorCount, 'BKWH \n', BKWHColorCount, 'WHPN', WHPNColorCount, 'WHOK', WHOKColorCount, 'STWH', STWHColorCount, 'STOK \n', STOKColorCount, 'STPN', STPNColorCount,'TTWH', TTWHColorCount)
-                    return (customizeOne, CSCount, CTCount, CDCount, ANCount, FWCount, WHCVColorCount, WHWHColorCount, BKWHColorCount, WHPNColorCount, WHOKColorCount, STWHColorCount, STOKColorCount, STPNColorCount, TTWHColorCount);
+                    return (projects, customizeOne, CSCount, CTCount, CDCount, ANCount, FWCount, WHCVColorCount, WHWHColorCount, BKWHColorCount, WHPNColorCount, WHOKColorCount, STWHColorCount, STOKColorCount, STPNColorCount, TTWHColorCount);
                 }
               
             });

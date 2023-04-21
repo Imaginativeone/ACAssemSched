@@ -3,6 +3,8 @@ import multer from 'multer';
 import cors from 'cors'
 import Excel from 'exceljs'
 import * as fs from "fs";
+import Papa from 'papaparse'
+import './src/utils/read.js'
 
 const app = express();
 import bodyParser from 'body-parser';
@@ -29,6 +31,7 @@ const upload = multer({
 
 /* Imports */
 import "dotenv/config";
+import { col } from 'sequelize';
 // import router from "./src/routes";
 
 
@@ -88,33 +91,68 @@ app.get('/fileContent', async (req, res) => {
 
     const content = []
     // Iterate over all rows (including empty rows) in a worksheet
-    worksheet.eachRow({ includeEmpty: true }, function(row, rowNumber) {
+    worksheet.eachRow({ includeEmpty: false }, function(row, rowNumber) {
         // Iterate over all cells in a row (including empty cells)
-        row.eachCell({ includeEmpty: true }, function(cell, colNumber) {
-        console.log('Cell ' + colNumber + ' = ' + cell.value);
-        content.push(row.values, cell.value)
-});
-        // console.log('Row ' + rowNumber + ' = ' + JSON.stringify(row.values))
+        row.eachCell({includeEmpty: false}, function(cell, cellNumber){
+            content.push(row.values, cell.value)
+        })
+        // console.log('Row ' + rowNumber + ' = ' + JSON.stringify(row.values) + 'Column cell' + cell.value + '=' + JSON.stringify(cell.value) )
     })
-
+    
     res.json(content) 
 })
 
 async function cleanUp(fileName) { 
-    const csvOptions = {
-        parserOptions: {
-            delimiter: '|',
-            quote: true,
-          },
-    }
+    // const csvOptions = {
+    //     parserOptions: {
+    //         delimiter: '|',
+    //         quote: true,
+    //       },
+    // }
+
+    const dataFile = readCreateData(`./uploadedFiles/${fileName}`)
+
+     const parsedData = Papa.parse(fileName, {
+        delimiter: "|",
+        header: true,
+    });
+
+    // Create a new Excel workbook
+    const workbook = new Excel.Workbook();
+    // const worksheet = await workbook.csv.readFile(`${dataFile}`);
+
+    // const worksheet = workbook.addWorksheet("");
+
+    // Write the header row
+    const headers = parsedData.meta.fields;
+    headers.forEach((header, index) => {
+        worksheet.getColumn(index + 1).key = header;
+        worksheet.getCell(1, index + 1).value = header;
+    });
+
+
+    // Write the data rows
+    parsedData.data.forEach((row, rowIndex) => {
+        // Check the value of the first column using the first header name
+        if (!["Date ", "Renewal", "----", " "].includes(row[headers[0]])) {
+            headers.forEach((header, colIndex) => {
+                // const cellValue = row[header];
+                worksheet.getCell(rowIndex + 2, colIndex + 1).value = cellValue;
+            });
+        } else {
+            console.log(" ---> removed", row);
+        }
+        return worksheet
+    });
 
     const newFileName = fileName.replace(/.csv$/, '').replace(/.txt$/, '')
 
-    const workbook = new Excel.Workbook();
-    const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`, csvOptions);
+    // const workbook = new Excel.Workbook();
+    // const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`, csvOptions);
+    // const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`).workbook.addWorksheet("Sheet1");
+
     await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`);
 }
-
 
 app.listen(5001, () => console.log("Running on localhost:5001"));
 
