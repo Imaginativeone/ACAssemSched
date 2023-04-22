@@ -18,8 +18,8 @@ const readFileLocation = "./testDatafile.txt"; // Test file location
 // const text = fs.createReadStream(readFileLocation, "utf-8");
 // console.log('contents of text file:', text)
 
-async function readCreateData(file) {
-  const text = fs.createReadStream(`${file}`, "utf-8");
+async function readCreateData() {
+  const text = fs.createReadStream(readFileLocation, "utf-8");
   const rl = readline.createInterface({
     input: text,
   });
@@ -65,7 +65,7 @@ async function readCreateData(file) {
         //   grille_type: "",
         // });
         // projects.push({Data: resList})
-        // console.log(`${counter} ${lineProj(proj_no)} ${lineProj(customizedItem)} ${lineProj(sort1)} ${res}`);
+        console.log(`${counter} ${lineProj(proj_no)} ${lineProj(customizedItem)} ${lineProj(sort1)} ${res}`);
         counter++;
         endOfLine++;
       } catch (err) {

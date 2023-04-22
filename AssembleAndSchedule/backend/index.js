@@ -2,9 +2,9 @@ import express from 'express';
 import multer from 'multer';
 import cors from 'cors'
 import Excel from 'exceljs'
+import  XlSX  from 'xlsx';
 import * as fs from "fs";
 import Papa from 'papaparse'
-import './src/utils/read.js'
 
 const app = express();
 import bodyParser from 'body-parser';
@@ -31,7 +31,7 @@ const upload = multer({
 
 /* Imports */
 import "dotenv/config";
-import { col } from 'sequelize';
+// import { col } from 'sequelize';
 // import router from "./src/routes";
 
 
@@ -89,69 +89,134 @@ app.get('/fileContent', async (req, res) => {
 
     const worksheet = workbook.worksheets[0]
 
+
+
+
     const content = []
     // Iterate over all rows (including empty rows) in a worksheet
     worksheet.eachRow({ includeEmpty: false }, function(row, rowNumber) {
         // Iterate over all cells in a row (including empty cells)
-        row.eachCell({includeEmpty: false}, function(cell, cellNumber){
-            content.push(row.values, cell.value)
-        })
+            content.push(row.values)
         // console.log('Row ' + rowNumber + ' = ' + JSON.stringify(row.values) + 'Column cell' + cell.value + '=' + JSON.stringify(cell.value) )
     })
     
     res.json(content) 
 })
 
+// async function cleanUp(fileName) { 
+//     const csvOptions = {
+//         parserOptions: {
+//             delimiter: ' ',
+//             quote: true,
+//           },
+//     }    
+
+//     // const parsedData = parseCustomFormatFile(fileName)
+//     const newFileName = fileName.replace(/.csv$/, '').replace(/.txt$/, '')
+
+//     const workbook = new Excel.Workbook();
+//     // const worksheet = await workbook.csv.readFile(`${parsedData}${fileName}`, csvOptions);
+//     const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`, csvOptions);
+//     // const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`).workbook.addWorksheet("Sheet1");
+
+//     // await workbook.xlsx.writeFile(`${parsedData}/${newFileName}.xlsx`);
+//     await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`);
+// }
+
+function parseCustomFormatFile(filePath) {
+  // Read the .txt file content
+  const content = fs.readFileSync(filePath, 'utf8');
+
+  // Split the content into lines
+  const lines = content.split('\n');
+  // console.log('lines', lines)
+
+  const parsedHeaders = Papa.parse(lines[4], {
+    delimiter: "|",
+    header: true,
+  })
+
+
+  // Initialize an array to store the parsed data
+  const data = [];
+
+  let i = 0;
+  while (i < lines.length) {
+    // Skip the header lines before each table
+    if (lines[i].trim().startsWith('Date')) {
+      i += 4;
+      continue;
+    }
+
+    // Extract headers from the current line
+    const headerLine = lines[i];
+    const headers = headerLine
+      .split('|')
+      .map((header) => header.trim())
+      .filter((header) => header !== '');
+    console.log('header', headers)
+
+    i += 2;
+
+    while (i < lines.length && !lines[i].startsWith('+-----')) {
+
+      const line = lines[i].trim();
+      if ([
+        '',
+        'Date',
+        'Renewal',
+        '----',
+        ' ',
+        'Total',
+      ].includes(line)) {
+        // Skip empty lines and table separators
+        i += 2;
+        continue;
+      }
+
+      // Split the line by '|' and map each value to the corresponding header
+      const values = line.split('|').map((value) => value.trim());
+      // console.log('values.length', values.length)
+      // console.log('headers.length', headers.length)
+      const rowData = {};
+
+      headers.forEach((header, index) => {
+        rowData[header] = values[index];
+      });
+
+      // Add the parsed row data to the data array
+      data.push(rowData);
+
+      i++;
+    }
+    console.log(data)
+  }
+
+  return data;
+}
+
+
 async function cleanUp(fileName) { 
-    // const csvOptions = {
-    //     parserOptions: {
-    //         delimiter: '|',
-    //         quote: true,
-    //       },
-    // }
+    console.log('filename', fileName)
 
-    const dataFile = readCreateData(`./uploadedFiles/${fileName}`)
+     const parsedData = parseCustomFormatFile(`./uploadedFiles/${fileName}`)
 
-     const parsedData = Papa.parse(fileName, {
-        delimiter: "|",
-        header: true,
-    });
+    const workSheet = XlSX.utils.json_to_sheet(parsedData);
+    const workBook = XlSX.utils.book_new();
 
-    // Create a new Excel workbook
-    const workbook = new Excel.Workbook();
-    // const worksheet = await workbook.csv.readFile(`${dataFile}`);
+    XlSX.utils.book_append_sheet(workBook, workSheet, "parsedData")
+    // Generate buffer
+    XlSX.write(workBook, { bookType: 'xlsx', type: "buffer" })
 
-    // const worksheet = workbook.addWorksheet("");
-
-    // Write the header row
-    const headers = parsedData.meta.fields;
-    headers.forEach((header, index) => {
-        worksheet.getColumn(index + 1).key = header;
-        worksheet.getCell(1, index + 1).value = header;
-    });
-
-
-    // Write the data rows
-    parsedData.data.forEach((row, rowIndex) => {
-        // Check the value of the first column using the first header name
-        if (!["Date ", "Renewal", "----", " "].includes(row[headers[0]])) {
-            headers.forEach((header, colIndex) => {
-                // const cellValue = row[header];
-                worksheet.getCell(rowIndex + 2, colIndex + 1).value = cellValue;
-            });
-        } else {
-            console.log(" ---> removed", row);
-        }
-        return worksheet
-    });
-
+    // Binary string
+    XlSX.write(workBook, { bookType: "xlsx", type: "binary" })
     const newFileName = fileName.replace(/.csv$/, '').replace(/.txt$/, '')
 
-    // const workbook = new Excel.Workbook();
-    // const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`, csvOptions);
-    // const worksheet = await workbook.csv.readFile(`./uploadedFiles/${fileName}`).workbook.addWorksheet("Sheet1");
+    XlSX.writeFile(workBook, `./uploadedFiles/${newFileName}.xlsx`)
 
-    await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`);
+
+
+    // await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`);
 }
 
 app.listen(5001, () => console.log("Running on localhost:5001"));
