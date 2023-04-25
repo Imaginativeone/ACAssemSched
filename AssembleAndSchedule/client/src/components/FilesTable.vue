@@ -5,9 +5,11 @@
     <DataTable :value="files" selectionMode="single" v-model:selection="selectedFile"
             @rowSelect="onRowSelect" dataKey="fileID"
             showGridlines stripedRows tableStyle="min-width: 50rem">
+            
         <Column field="fileName" header="File Name"></Column>
         <!-- <Column field= "dateAdded" header="Date Added"></Column> -->
         <!-- <Column field="status" header="Status"></Column> -->
+        
     </DataTable>
 </div>
 </template>

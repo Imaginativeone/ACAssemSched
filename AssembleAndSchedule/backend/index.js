@@ -195,15 +195,31 @@ function parseCustomFormatFile(filePath) {
   return data;
 }
 
+async function freshStart(fileName){
+    console.log('filename', fileName)
+
+    const parsedData = parseCustomFormatFile(`./uploadedFiles/${fileName}`)
+    const workSheet = XlSX.utils.json_to_sheet(parsedData);
+
+    workSheet.autoFilter(1); // Auto filter on the first row of the worksheet
+    workSheet.getRange('A1:AZ1').clear(); // Clear the contents of the first row of the worksheet
+    workSheet.getRange('A:AZ').clear(); // Clear the contents of all cells in columns A to AZ
+    workSheet.spliceColumns(1, 52); // Delete the columns A to AZ
+}
+
 
 async function cleanUp(fileName) { 
     console.log('filename', fileName)
-
-     const parsedData = parseCustomFormatFile(`./uploadedFiles/${fileName}`)
-
+    
+    const parsedData = parseCustomFormatFile(`./uploadedFiles/${fileName}`)
     const workSheet = XlSX.utils.json_to_sheet(parsedData);
-    const workBook = XlSX.utils.book_new();
+    // VBA code starts here
+    
 
+
+
+
+    const workBook = XlSX.utils.book_new();
     XlSX.utils.book_append_sheet(workBook, workSheet, "parsedData")
     // Generate buffer
     XlSX.write(workBook, { bookType: 'xlsx', type: "buffer" })
@@ -212,11 +228,9 @@ async function cleanUp(fileName) {
     XlSX.write(workBook, { bookType: "xlsx", type: "binary" })
     const newFileName = fileName.replace(/.csv$/, '').replace(/.txt$/, '')
 
-    XlSX.writeFile(workBook, `./uploadedFiles/${newFileName}.xlsx`)
+    await XlSX.writeFile(workBook, `./uploadedFiles/${newFileName}.xlsx`)
 
-
-
-    // await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`);
+    // await workbook.xlsx.writeFile(`./uploadedFiles/${newFileName}.xlsx`); not needed temporarily retained for reference
 }
 
 app.listen(5001, () => console.log("Running on localhost:5001"));
