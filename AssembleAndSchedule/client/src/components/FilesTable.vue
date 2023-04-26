@@ -2,7 +2,7 @@
 
 <template>
     <div class="card">
-    <DataTable :value="files" selectionMode="single" v-model:selection="selectedFile"
+    <DataTable :value="files" scrollable scrollHeight="500px" :virtualScrollerOptions="{itemSize: 56}" selectionMode="single" v-model:selection="selectedFile"
             @rowSelect="onRowSelect" dataKey="fileID"
             showGridlines stripedRows tableStyle="min-width: 50rem">
             

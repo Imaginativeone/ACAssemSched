@@ -98,7 +98,7 @@ The row and col properties of this object can then be used to determine the row 
 Also, make sure to install ExcelJS library before using it in the code. You can do this by running npm install exceljs command in the terminal.
 */
 
-const workbook = new ExcelJS.Workbook();
+// const workbook = new ExcelJS.Workbook();
 workbook.xlsx.readFile('path/to/your/workbook.xlsx')
   .then(function() {
     const worksheet = workbook.getWorksheet('Sheet1');
@@ -115,7 +115,7 @@ workbook.xlsx.readFile('path/to/your/workbook.xlsx')
 
 // Range find method
 // Load the workbook and select the worksheet
-var workbook = new ExcelJS.Workbook();
+// var workbook = new ExcelJS.Workbook();
 workbook.xlsx.readFile('filename.xlsx')
   .then(function() {
     var worksheet = workbook.getWorksheet('Sheet1');
@@ -153,7 +153,7 @@ console.log('worksheet', worksheet);
 // Load the workbook and select the worksheet
 // Note that you'll need to install and import the ExcelJS library in your project before running this code. 
 // Also, make sure to replace 'filename.xlsx' and 'Sheet1' with the appropriate values for your Excel file and worksheet.
-const workbook = new ExcelJS.Workbook();
+// const workbook = new ExcelJS.Workbook();
 await workbook.xlsx.readFile('filename.xlsx');
 const worksheet = workbook.getWorksheet('Sheet1');
 
@@ -186,7 +186,7 @@ await workbook.xlsx.writeFile('filename.xlsx');
 'End Sub
 */
 const ExcelJS = require('exceljs'); // import exceljs library
-const workbook = new ExcelJS.Workbook();
+// const workbook = new ExcelJS.Workbook();
 workbook.xlsx.readFile('path/to/your/workbook.xlsx') // open workbook
     .then(function() {
         const worksheet = workbook.getWorksheet('Sheet1'); // select worksheet
@@ -212,7 +212,7 @@ Columns("G:G").Select
     Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
 */
 
-const workbook = new ExcelJS.Workbook();
+// const workbook = new ExcelJS.Workbook();
 workbook.xlsx.readFile('input.xlsx')
     .then(function() {
         const worksheet = workbook.getWorksheet('Sheet1');
@@ -262,7 +262,7 @@ End With
 'End Sub
 
 */
-const worksheet = workbook.getWorksheet('Sheet1'); // Replace 'Sheet1' with the name of your worksheet
+// const worksheet = workbook.getWorksheet('Sheet1'); // Replace 'Sheet1' with the name of your worksheet
 worksheet.getCell('G1').value = 'Product Type';
 worksheet.getCell('H1').value = 'Int/Ext';
 worksheet.getCell('I1').value = 'Unit Type';
@@ -288,8 +288,8 @@ Range("J:J").Cut Range("G:G")
  '   Application.CutCopyMode = Fal
 
 */
-const workbook = new ExcelJS.Workbook();
-const worksheet = workbook.addWorksheet('Sheet1');
+// const workbook = new ExcelJS.Workbook();
+// const worksheet = workbook.addWorksheet('Sheet1');
 
 // Insert a new column G and shift existing columns to the right
 worksheet.columns.insert(7, 1, {key: 'G'});
@@ -403,7 +403,7 @@ Columns("I").Replace _
 
 */
 
-const workbook = new ExcelJS.Workbook();
+// const workbook = new ExcelJS.Workbook();
 const sheet = workbook.addWorksheet('Sheet1');
 
 // Identifying FF windows
@@ -644,8 +644,7 @@ worksheet.autoFilter.applyFilter();
     
     
  'create new file before final modifications
-
- Dim IntialName As String
+Dim IntialName As String
 Dim sFileSaveName As Variant
 IntialName = "CSPRESEQXXXXb"
 sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=InitialName, fileFilter:="Excel Files (*.xlsm), *.xlsm")
@@ -696,7 +695,7 @@ const ExcelJS = require('exceljs');
 
 // create new file before final modifications
 let initialName = "CSPRESEQXXXXb";
-let workbook = new ExcelJS.Workbook();
+// let workbook = new ExcelJS.Workbook();
 workbook.xlsx.writeBuffer()
   .then(buffer => {
     let fileSaver = require('file-saver');
@@ -731,9 +730,6 @@ workbook.xlsx.writeBuffer()
   .catch(error => {
     console.error(error.message);
   });
-
-npm install exceljs
-npm install file-saver
 
 
 /* 
@@ -773,7 +769,7 @@ End Sub
 const ExcelJS = require('exceljs');
 
 // Create a new workbook instance
-const workbook = new ExcelJS.Workbook();
+// const workbook = new ExcelJS.Workbook();
 
 // Load the workbook from file
 workbook.xlsx.readFile('path/to/workbook.xlsx')
@@ -1023,7 +1019,7 @@ End Sub
 
 
 /* first translation */
-const workbook = new ExcelJS.Workbook();
+// const workbook = new ExcelJS.Workbook();
 
 workbook.xlsx.readFile('sample.xlsx')
     .then(function () {
@@ -1074,10 +1070,12 @@ workbook.xlsx.readFile('sample.xlsx')
         const targetRange2 = worksheet.getCell('S2:T1500');
         targetRange2.value = sourceRange2.value;
 
-        // CS
+        // CS --> this translation is not complete
         for (let i = 2; i <= 1500; i++) {
             if (worksheet.getCell(`G${i}`).value === 'CS') {
                 if (worksheet.getCell(`M${i - 1}`).value === 300) worksheet.getCell
+            }
+        }
 
       
 /* Second translation */
@@ -1086,7 +1084,7 @@ const workbook = new ExcelJS.Workbook();
 
 // Load the workbook and the worksheet
 await workbook.xlsx.readFile('workbook.xlsx');
-const worksheet = workbook.getWorksheet('Sheet1');
+// const worksheet = workbook.getWorksheet('Sheet1');
 
 // Define the current sequence for casement
 const casementSequence = {
@@ -1149,9 +1147,9 @@ for (let row = 2; row <= worksheet.lastRow; row++) {
         } else if (previousCellValue === cas
 
 // I broke up the functions a bit
-const workbook = new ExcelJS.Workbook();
+// const workbook = new ExcelJS.Workbook();
 await workbook.xlsx.readFile('file.xlsx');
-const worksheet = workbook.getWorksheet('Sheet1');
+// const worksheet = workbook.getWorksheet('Sheet1');
 
 const myRng = worksheet.getCell('M2:M1500');
 

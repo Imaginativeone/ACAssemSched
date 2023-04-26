@@ -2,7 +2,7 @@
   <div class="table">
     <hot-table 
       ref="hotTableComponent"
-      :data="data" :rowHeaders="true" :colHeaders="true" 
+      :data="data" :rowHeaders="true" :colHeaders="true" autoColumnSize: true
       licenseKey="non-commercial-and-evaluation">
     </hot-table>
   </div>
@@ -32,6 +32,10 @@
             ['S32273', 'CS WHWH14183563',	  10,	20,	1,	'unit',	'CS',	'WHWH', 'if', 'n', '01-16-23' ]
 
           ],
+          colHeaders:true,
+          dropdownMenu: true,
+          height:"auto",
+          licenseKey: 'non-commercial-and-evaluation',
         };
       },
       methods: {
