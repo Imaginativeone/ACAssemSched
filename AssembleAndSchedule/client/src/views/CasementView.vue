@@ -4,12 +4,6 @@
   </header>
     <div class="container">
       <ButtonComponent 
-        text=" Fresh Start" 
-        color="green" 
-        @click="freshStart()"
-      />
-
-      <ButtonComponent 
         text=" Clean-Up plus BatchBin" 
         color="blue" 
         @click="cleanUp_bb()"
