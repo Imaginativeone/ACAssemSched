@@ -122,7 +122,7 @@ export default {
     methods: {
         getFile(){
           // const dataFile = this.file
-          const file = fetch("https://localhost:3305/uploadedFiles/").then(response => {return response.json(); })
+          const file = fetch("https://localhost:5001/uploadedFiles/").then(response => {return response.json(); })
           console.log(file);
         },
         textToJSON() {

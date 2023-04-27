@@ -1,5 +1,5 @@
 <template> 
-    <form @submit.prevent="uploadFile" enctype="multypart/form-data">
+    <form @submit.prevent="sendFile" enctype="multipart/form-data">
       <div v-if="message"
         :class="`message ${error ? 'is-danger' : 'is-sucess'}`"
         >
@@ -33,7 +33,7 @@
        </div>
 
        <div class="field">
-        <button class="button is-info" @click="sendFile">Upload File</button>
+        <button class="button is-info">Upload File</button>
        </div>
     
     </form>
@@ -42,10 +42,11 @@
 <script>
 
 import axios from 'axios'
-// import useReadXLSX from '../composables/useReadXLSX'
 
 export default {
   name: "SimpleUpload",
+  
+  props: [],
 
   data(){
     return{
@@ -69,58 +70,25 @@ export default {
         this.error = true;
         this.message =  tooLarge ? `Too large. Max size is ${MAX_SIZE/1000}kb`: " Only CVS or Excel files allowed";
       }
-
-      console.log('We are here in SelectFile Line 72')
-
       const formData = new FormData();
       formData.append('file', this.file);
       JSON.stringify(this.file);
-
-      // Read file contents  ---> this DOES NOT WORK
-      const fileContents = new FileReader();
-      let fileContent = fileContents.readAsText(this.file);
-      console.log('This time? ---> line 82', fileContent, this.file)
-
     },
 
     async sendFile(){
       const formData = new FormData();
       formData.append('file', this.file);
-      JSON.stringify(formData);
-      // const file = ' ';
-      let uploadedFiles = []
-
       try {
-        // await axios.post({file:file}, formData)
-
-        // await axios.post('/uploadedFiles', formData);
-        await axios.post(uploadedFiles, formData)
-        // console.log(JSON.stringify(formData));
-        this.message = "File has been uploaded";
+        await axios.post('/uploadedFiles', formData)
+        this.message = "File has been uploaded!";
         this.file = "";
         this.error = false;
       } catch (err){
         this.message = err.respsonse.data.error;
         this.error = true;
-      }
-      console.log('The data', uploadedFiles);
+      }    
+    },
     
-    },
-    async uploadFile(){
-      const formData = new FormData();
-      formData.append('file', this.file);
-      try {
-        let result = await axios.post('/uploadedFiles', formData);
-        this.message = "File has been uploaded";
-        this.file = "";
-        this.error = false;
-        console.log(result);
-      } catch (err) {
-        this.message = err.respsonse.data.error;
-        this.error = true;
-      }
-      
-    },
     async saveFile(){
         if(this.file){
           try{
@@ -135,6 +103,7 @@ export default {
         } 
     },
     showFileContents(){
+      // This function might not be useful since we're now using Handsontables
           let input = document.querySelector('input');
           let textArea = document.querySelector('textarea');
           

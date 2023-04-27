@@ -8,11 +8,18 @@ import PrimeVue from 'primevue/config'
 // import Button from "primevue/button"
 import TabMenu from "primevue/tabmenu"
 import DataTable from 'primevue/datatable'
-// import Column from 'primevue/column'
+import Column from 'primevue/column'
 // import ToastService from 'primevue/toastservice'
 // import Toast from 'primevue/toast'
 // import Tooltip from 'primevue/tooltip'
 import './assets/tailwind.css'
+
+//theme
+import "primevue/resources/themes/lara-light-indigo/theme.css";     
+//core
+import "primevue/resources/primevue.min.css";
+//icons
+import "primeicons/primeicons.css";
 
 // Require statements
 require("@/assets/main.scss")
@@ -32,7 +39,8 @@ App.component('PrimeVue', PrimeVue);
 // App.component('Button', Button);
 App.component('TabMenu', TabMenu);
 App.component('DataTable', DataTable);
-// App.component('Column', Column);
+// eslint-disable-next-line
+App.component('Column', Column);
 // app.component('Toast', Toast);
 
 
